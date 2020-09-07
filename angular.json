@@ -24,9 +24,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "QLcuahangdogonoithat"
+    }
+  },
+  "defaultProject": "QLcuahangdogonoithat",
+  "cli": {
+    "analytics": "f6ebc657-dbc3-4edb-ba29-bb1dab17c274"
+  }
 }
