@@ -10,7 +10,6 @@ const route:Routes=[
   }
 ]
 
-
 @NgModule({
   declarations: [],
   imports: [
