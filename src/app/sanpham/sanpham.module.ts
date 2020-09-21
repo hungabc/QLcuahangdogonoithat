@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {Routes,RouterModule} from'@angular/router';
-import{SanphamComponent} from './sanpham.component'
+import {ChitietspComponent} from '../sanpham/chitietsp/chitietsp.component';
+import { SanphamRoutingModule } from './sanpham.routing-module';
+import { SanphamComponent } from './sanpham.component';
+import { SptheoloaiComponent } from './sptheoloai/sptheoloai.component';
 
 
-const route:Routes=[
-  {
-    path: 'danh-sach',component:SanphamComponent,
-  }
-]
+
+
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ChitietspComponent,SanphamComponent, SptheoloaiComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    SanphamRoutingModule
   ]
 })
 export class SanphamModule { }

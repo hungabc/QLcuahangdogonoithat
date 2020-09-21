@@ -7,9 +7,12 @@ import { DautrangComponent } from './shared/dautrang/dautrang.component';
 import { HomeComponent } from './home/home.component';
 import { TimkiemComponent } from './timkiem/timkiem.component';
 import { TintucComponent } from './tintuc/tintuc.component';
-import { SanphamComponent } from './sanpham/sanpham.component';
-import { ChitietspComponent } from './sanpham/chitietsp/chitietsp.component';
+// import { SanphamComponent } from './sanpham/sanpham.component';
+// import { ChitietspComponent } from './sanpham/chitietsp/chitietsp.component';
 import { KhongthayComponent } from './shared/khongthay/khongthay.component';
+// import { CartComponent } from './cart/cart.component';
+import { LoginComponent } from './login/login.component';
+// import { CheckoutComponent } from './cart/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -19,9 +22,12 @@ import { KhongthayComponent } from './shared/khongthay/khongthay.component';
     HomeComponent,
     TimkiemComponent,
     TintucComponent,
-    SanphamComponent,
-    ChitietspComponent,
-    KhongthayComponent
+    // SanphamComponent,
+    // ChitietspComponent,
+    KhongthayComponent,
+    // CartComponent,
+    LoginComponent,
+    // CheckoutComponent
   ],
   imports: [
     BrowserModule,

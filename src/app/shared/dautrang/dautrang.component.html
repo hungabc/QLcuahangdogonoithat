@@ -1,495 +1,244 @@
-<header>
-    <!-- top Header -->
-    <div id="top-header">
-        <div class="container">
-            <div class="pull-left">
-                <span>Welcome to E-shop!</span>
+<div id="header" class="header">
+    <!-- MAIN HEADER -->
+    <div class="container main-header">
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 logo">
+                <a routerLink=""><img alt="Gỗ Trang Trí" src="assets/images/logo.png" /></a>
             </div>
-            <div class="pull-right">
-                <ul class="header-top-links">
-                    <li><a href="#">Store</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li class="dropdown default-dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">ENG <i class="fa fa-caret-down"></i></a>
-                        <ul class="custom-menu">
-                            <li><a href="#">English (ENG)</a></li>
-                            <li><a href="#">Russian (Ru)</a></li>
-                            <li><a href="#">French (FR)</a></li>
-                            <li><a href="#">Spanish (Es)</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown default-dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">USD <i class="fa fa-caret-down"></i></a>
-                        <ul class="custom-menu">
-                            <li><a href="#">USD ($)</a></li>
-                            <li><a href="#">EUR (€)</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /top Header -->
-    <!-- header -->
-    <div id="header">
-        <div class="container">
-            <div class="pull-left">
-                <!-- Logo -->
-                <div class="header-logo">
-                    <a class="logo" href="#">
-                        <img src="assets/img/logo.png" alt="">
-                    </a>
-                </div>
-                <!-- /Logo -->
-
-                <!-- Search -->
-                <div class="header-search">
-                    <form>
-                        <input class="input search-input" type="text" placeholder="Enter your keyword">
-                        <select class="input search-categories">
-                            <option value="0">All Categories</option>
-                            <option value="1">Category 01</option>
-                            <option value="1">Category 02</option>
-                        </select>
-                        <button class="search-btn"><i class="fa fa-search"></i></button>
-                    </form>
-                </div>
-                <!-- /Search -->
-            </div>
-            <div class="pull-right">
-                <ul class="header-btns">
-                    <!-- Account -->
-                    <li class="header-account dropdown default-dropdown">
-                        <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
-                            <div class="header-btns-icon">
-                                <i class="fa fa-user-o"></i>
-                            </div>
-                            <strong class="text-uppercase">My Account <i class="fa fa-caret-down"></i></strong>
-                        </div>
-                        <a href="#" class="text-uppercase">Login</a> / <a href="#" class="text-uppercase">Join</a>
-                        <ul class="custom-menu">
-                            <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
-                            <li><a href="#"><i class="fa fa-heart-o"></i> My Wishlist</a></li>
-                            <li><a href="#"><i class="fa fa-exchange"></i> Compare</a></li>
-                            <li><a href="#"><i class="fa fa-check"></i> Checkout</a></li>
-                            <li><a href="#"><i class="fa fa-unlock-alt"></i> Login</a></li>
-                            <li><a href="#"><i class="fa fa-user-plus"></i> Create An Account</a></li>
-                        </ul>
-                    </li>
-                    <!-- /Account -->
-
-                    <!-- Cart -->
-                    <li class="header-cart dropdown default-dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                            <div class="header-btns-icon">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span class="qty">3</span>
-                            </div>
-                            <strong class="text-uppercase">My Cart:</strong>
-                            <br>
-                            <span>35.20$</span>
-                        </a>
-                        <div class="custom-menu">
-                            <div id="shopping-cart">
-                                <div class="shopping-cart-list">
-                                    <div class="product product-widget">
-                                        <div class="product-thumb">
-                                            <img src="assets/img/thumb-product01.jpg" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                                            <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                                        </div>
-                                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                                    </div>
-                                    <div class="product product-widget">
-                                        <div class="product-thumb">
-                                            <img src="assets/img/thumb-product01.jpg" alt="">
-                                        </div>
-                                        <div class="product-body">
-                                            <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                                            <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                                        </div>
-                                        <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                                    </div>
-                                </div>
-                                <div class="shopping-cart-btns">
-                                    <button class="main-btn">View Cart</button>
-                                    <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <!-- /Cart -->
-
-                    <!-- Mobile nav toggle-->
-                    <li class="nav-toggle">
-                        <button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
-                    </li>
-                    <!-- / Mobile nav toggle -->
-                </ul>
-            </div>
-        </div>
-        <!-- header -->
-    </div>
-            <!-- container -->
-            <div class="container">
-                <div id="responsive-nav">
-                    <!-- category nav -->
-                    <div class="category-nav">
-                        <span class="category-header">Categories <i class="fa fa-list"></i></span>
-                        <ul class="category-list">
-                            <li class="dropdown side-dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Women’s Clothing <i class="fa fa-angle-right"></i></a>
-                                <div class="custom-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row hidden-sm hidden-xs">
-                                        <div class="col-md-12">
-                                            <hr>
-                                            <a class="banner banner-1" href="#">
-                                                <img src="assets/img/banner05.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h2 class="white-color">NEW COLLECTION</h2>
-                                                    <h3 class="white-color font-weak">HOT DEAL</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">Men’s Clothing</a></li>
-                            <li class="dropdown side-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Phones & Accessories <i class="fa fa-angle-right"></i></a>
-                                <div class="custom-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-4 hidden-sm hidden-xs">
-                                            <a class="banner banner-2" href="#">
-                                                <img src="assets/img/banner04.jpg" alt="">
-                                                <div class="banner-caption">
-                                                    <h3 class="white-color">NEW<br>COLLECTION</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">Computer & Office</a></li>
-                            <li><a href="#">Consumer Electronics</a></li>
-                            <li class="dropdown side-dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Jewelry & Watches <i class="fa fa-angle-right"></i></a>
-                                <div class="custom-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">Bags & Shoes</a></li>
-                            <li><a href="#">View All</a></li>
-                        </ul>
+            <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
+                <form class="form-inline" action=""method="post" id="header-search">
+                    <div class="form-group input-serach">
+                        <input type="text" name="timkiem" placeholder="Search ...">
                     </div>
-                    <!-- /category nav -->
-        
-                    <!-- menu nav -->
-                    <div class="menu-nav">
-                        <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-                        <ul class="menu-list">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Shop</a></li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Women <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                            <hr class="hidden-md hidden-lg">
-                                        </div>
-                                        <div class="col-md-4">
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="row hidden-sm hidden-xs">
-                                        <div class="col-md-12">
-                                            <hr>
-                                            <a class="banner banner-1" href="#">
-                                                <img src="assets/img/banner05.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h2 class="white-color">NEW COLLECTION</h2>
-                                                    <h3 class="white-color font-weak">HOT DEAL</h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Men <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">
-                                    <div class="row">
-                                        <div class="col-md-3">
-                                            <div class="hidden-sm hidden-xs">
-                                                <a class="banner banner-1" href="#">
-                                                    <img src="assets/img/banner06.jpg" alt="">
-                                                    <div class="banner-caption text-center">
-                                                        <h3 class="white-color text-uppercase">Women’s</h3>
-                                                    </div>
-                                                </a>
-                                                <hr>
-                                            </div>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="hidden-sm hidden-xs">
-                                                <a class="banner banner-1" href="#">
-                                                    <img src="assets/img/banner07.jpg" alt="">
-                                                    <div class="banner-caption text-center">
-                                                        <h3 class="white-color text-uppercase">Men’s</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="hidden-sm hidden-xs">
-                                                <a class="banner banner-1" href="#">
-                                                    <img src="assets/img/banner08.jpg" alt="">
-                                                    <div class="banner-caption text-center">
-                                                        <h3 class="white-color text-uppercase">Accessories</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="hidden-sm hidden-xs">
-                                                <a class="banner banner-1" href="#">
-                                                    <img src="assets/img/banner09.jpg" alt="">
-                                                    <div class="banner-caption text-center">
-                                                        <h3 class="white-color text-uppercase">Bags</h3>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <hr>
-                                            <ul class="list-links">
-                                                <li>
-                                                    <h3 class="list-links-title">Categories</h3></li>
-                                                <li><a href="#">Women’s Clothing</a></li>
-                                                <li><a href="#">Men’s Clothing</a></li>
-                                                <li><a href="#">Phones & Accessories</a></li>
-                                                <li><a href="#">Jewelry & Watches</a></li>
-                                                <li><a href="#">Bags & Shoes</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#">Sales</a></li>
-                            <li class="dropdown default-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pages <i class="fa fa-caret-down"></i></a>
-                                <ul class="custom-menu">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="products.html">Products</a></li>
-                                    <li><a href="product-page.html">Product Details</a></li>
-                                    <li><a href="checkout.html">Checkout</a></li>
+                    <button type="submit" class="pull-right btn-search"><i class="fa fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 group-button-header">
+                <a title="Trang Quản Trị" href="#" class="btn-compare">Quản Trị</a>
+                <a title="Đăng Kí" href="" class="btn-heart" data-toggle="modal" data-target="#myModal" >Đăng Kí</a>
+
+                <div class="btn-cart" id="cart-block">
+                    <a title="Đăng Nhập" href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- END MANIN HEADER -->
+    <div id="nav-top-menu" class="nav-top-menu">
+        <div class="container">
+            <div class="row">
+                <div id="main-menu" class="col-sm-12 main-menu">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <a class="navbar-brand" routerLink="#">MENU</a>
+                            </div>
+                            <div id="navbar" class="navbar-collapse collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="active"><a routerLink=""><span class="fa fa-home"></span>TRANG CHỦ</a></li>
+                                    <li class="dropdown">
+                                        <a routerLink="" class="dropdown-toggle"
+                                           data-toggle="dropdown">SẢN PHẨM</a>
+                                        <ul class="dropdown-menu container-fluid">
+                                            <li class="block-container">
+                                                <ul class="block">
+                                
+                                                    
+                                                        <li class="link_container"><a routerLink="">Loại</a></li>
+                                                  
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a routerLink="gioithieu">GIỚI THIỆU</a></li>
+                                    <li><a routerLink="tuvan">TƯ VẤN</a></li>
+                                    <li><a routerLink="lienhe">LIÊN HỆ</a></li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- menu nav -->
+                            </div>
+                        </div>
+                    </nav>
                 </div>
-            <!-- /container -->
+            </div>
+            <div id="form-search-opntop">
+            </div>
+            <div id="user-info-opntop">
+            </div>
+            <div id="shopping-cart-box-ontop">
+                <i class="fa fa-user" data-toggle="modal" data-target="#myModal"></i>
+                <div class="shopping-cart-box-ontop-content"></div>
+            </div>
         </div>
-</header>
+    </div>
+</div>
+<div class="demo_changer active" id="demo_changer" style="right: 0px;">
+    <div class="demo-icon fa fa-shopping-cart">
+        <span class="notify notify-left" id="count-cart"></span>
+    </div>
+    <div class="form_holder">
+        <div class="cart-block">
+            <div class="cart-block-content">
+                <div class="cart-block-list">
+                    <div class="shop_cart">
+                        <table class="shop_table">
+                            <tbody id="show-cart"></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="toal-cart">
+                    <span>Tổng tiền</span>
+                    <span class="toal-price pull-right" id="total_price"></span>
+                </div>
+                <div class="cart-buttons">
+                    <a routerLink="" class="btn-check-out">Giỏ Hàng</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel" style="font-weight: bold">Đăng Nhập/Đăng Kí</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-7" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a routerLink="#Login" data-toggle="tab">Đăng Nhập</a></li>
+                            <li><a routerLink="#Registration" data-toggle="tab">Đăng Kí</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!-- LOGIN -->
+                            <div class="tab-pane active" id="Login">
+                                <form action="" name="dangnhap_from"  class="form-horizontal"
+                                      id="" method="post">
+                                   
+                                    <div class="form-group">
+                                        <label for="email_login" class="col-sm-3 control-label">Email</label>
+                                        <div class="col-sm-9">
+                                            <input type="email" class="input form-control" name="email" id="email"
+                                                   placeholder="Email...." />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass_login" class="col-sm-3 control-label">Mật Khẩu</label>
+                                        <div class="col-sm-9">
+                                            <input type="password" class="input form-control" name="mk" id="mk"
+                                                   placeholder="Mật khẩu" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-3">
+                                        </div>
+                                        <div class="col-sm-9">
+                                            <button class="button" type="submit" id="button-confirm">Đăng Nhập</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- REGISTER -->
+                            <div class="tab-pane fade" id="Registration">
+                                <form class="form-horizontal" name="dangkytk_form" action="" method="post"
+                                      enctype="multipart/form-data" id="dangkytk_form register">
+                                   
+                                    <div class="form-group">
+                                        <label for="frm_name" class="col-sm-4 control-label">Họ tên</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text"  class="input form-control"  name="hoten"  id="hoten" required />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="emailtk" class="col-sm-4 control-label">Email</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="email"  class="input form-control" name="email" id="email" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="pass_tk" class="col-sm-4 control-label">Mật Khẩu</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="password"  class="input form-control" name="mk" id="mk" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="repass_tk" onchange="checkmk()" class="col-sm-4 control-label">Nhập Lại Mật Khẩu</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="password" class="input form-control" name="remk" id="remk" required />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="ngaysinh_tk" class="col-sm-4 control-label">Ngày Sinh</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="date" class="input form-control" name="ngaysinh" id="ngaysinh_tk"  />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="gender_tk" class="col-sm-4 control-label">Giới Tính</label>
+
+                                        <div class="col-sm-8">
+                                            <select class="input form-control" name="gioitinh" id="gender_tk">
+                                                <option value="" checked>Tôi Là ...</option>
+                                                <option value="nữ">Nữ</option>
+                                                <option value="nam">Nam</option>
+                                                <option value="khác">Khác</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="diachi" class="col-sm-4 control-label">Địa Chỉ</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" name="diachi" class="input form-control" id="diachi_dk" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dienthoai" class="col-sm-4 control-label">Số Điện Thoại</label>
+
+                                        <div class="col-sm-8">
+                                            <input type="text" name="dienthoai" class="input form-control" id="dienthoai_dk" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-4">
+                                        </div>
+                                        <div class="col-sm-8">
+                                            <button class="button"  type="submit">Đăng Kí</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="OR" class="hidden-xs">Hoặc</div>
+                    </div>
+                    <!-- Facebook - Google account -->
+                    <div class="col-md-5">
+                        <div class="row text-center sign-with">
+                            <div class="social-header">Đăng Nhập Với</div>
+                            <div class="unit social-column">
+                                <div class="social-inner">
+                                    <div><a routerLink=""><img src="assets/images/fb-login-button-big.png" alt="login-facebook"></a></div>
+                                    <div><a routerLink=""><img src="assets/images/gg-login-button-big.png" alt="login-google"></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
