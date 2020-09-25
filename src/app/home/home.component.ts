@@ -31,7 +31,6 @@ export class HomeComponent implements OnInit,AfterViewInit {
     }
     this.renderExternalScript('assets/js/option4.js').onload = () => {
     }
-    
   }
   public renderExternalScript(src: string): HTMLScriptElement {
     const script = document.createElement('script');
