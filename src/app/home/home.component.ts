@@ -14,7 +14,6 @@ export class HomeComponent implements OnInit,AfterViewInit {
     this.loadScripts();
   }
   public loadScripts() {
-    //tạm thời
     this.renderExternalScript('assets/js/layout.js').onload = () => {
     }
     this.renderExternalScript('assets/js/shoppingCart.js').onload = () => {
