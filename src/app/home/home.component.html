@@ -27,12 +27,12 @@
                     <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
                         data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
                         data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
-
+                        
                         <li>
                             <div class="left-block">
                                 <a routerLink="">
-                                    <img class="img-responsive" alt="product"
-                                         src="assets/images/hinhanh/Products/anh" />
+                                    <img class="img-responsive" alt="product"list_item
+                                         src="assets/images/hinhanh/Products/" />
                                 </a>
                                 <div class="quick-view">
                                     <a title="Tương tác" class="heart" routerLink="#"></a>
@@ -45,15 +45,15 @@
                                 </div>
                             </div>
                             <div class="right-block">
-                                <h5 class="product-name"><a routerLink="">tên</a></h5>
+                                <h5 class="product-name"><a routerLink=""></a></h5>
                                 <div class="content_price">
                                     <div class="content_price">
-                                        <span class="price product-price"><span style="color: black"></span>7.000.000 VNĐ</span>
+                                        <span class="price product-price"><span style="color: black"></span></span>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                       
+                   
                     </ul>
                 </div>
             </div>
@@ -78,6 +78,7 @@
                             <div class="box-right">
           
                                     <ul class="product-list">
+                                        <ng-container *ngFor="let item of list">
                                         <li class="col-sm-4 product-item">
                                             <div class="left-block">
                                                 <a routerLink="">
@@ -97,18 +98,24 @@
                                                 <div class="icon-sale7"></div>
                                             </div>
                                             <div class="right-block">
-                                                <h5 class="product-name"><a routerLink=""></a></h5>
+                                                <h5 class="product-name"><a routerLink="">{{item.tensp}}</a></h5>
                                             </div>
                                             <div class="content_price">
                                                 <div class="content_price">
-                                                    <span class="price product-price"><span style="color: black"></span> VNĐ</span>
+                                                    <span class="price product-price"><span style="color: black"></span>{{item.gia}} VNĐ</span>
                                                 </div>
                                             </div>
                                         </li>
+                                    </ng-container>
                                     </ul>
                               
                             </div>
                         </div>
+                    </div>
+                    {{totalItems}}
+                    <!-- nút phân trang -->
+                    <div class="shop_toolbar t_bottom">
+                        <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
                     </div>
                 </div>
             </div>

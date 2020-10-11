@@ -15,50 +15,25 @@ export class BaseComponent {
       this._cart = injector.get(CartService);
       this._route = injector.get(ActivatedRoute);
       } 
-   public loadScripts() {
-    this.renderExternalScript('assets/js/layout.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/shoppingCart.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/jquery.actual.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/login.js').onload = () => {
-    }
-     this.renderExternalScript('assets/js/checkout.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/contact-us.js').onload = () => {
-    }
-     this.renderExternalScript('assets/js/theme-script.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/option4.js').onload = () => {
-    }
-  
-    this.renderExternalScript('assets/lib/jquery/jquery-1.11.2.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/lib/jquery-migrate.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/lib/fancyBox/source/jquery.fancybox.pack.js').onload = () => {
-    }
-    this.renderExternalScript('assets/lib/bootstrap/js/bootstrap.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/lib/select2/js/select2.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/lib/jquery.bxslider/jquery.bxslider.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/lib/owl.carousel/owl.carousel.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/jquery.actual.min.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/theme-script.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/shoppingCart.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/layout.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/themsuaxoa.js').onload = () => {
-    }
+      public loadScripts() {
+         this.renderExternalScript('assets/js/layout.js').onload = () => {
+         }
+         this.renderExternalScript('assets/js/shoppingCart.js').onload = () => {
+         }
+         this.renderExternalScript('assets/js/jquery.actual.js').onload = () => {
+         }
+         this.renderExternalScript('assets/js/login.js').onload = () => {
+         }
+          this.renderExternalScript('assets/js/checkout.js').onload = () => {
+         }
+         this.renderExternalScript('assets/js/contact-us.js').onload = () => {
+         }
+          this.renderExternalScript('assets/js/theme-script.js').onload = () => {
+         }
+         this.renderExternalScript('assets/js/option4.js').onload = () => {
+         }
        }
-   public renderExternalScript(src: string): HTMLScriptElement {
+       public renderExternalScript(src: string): HTMLScriptElement {
          const script = document.createElement('script');
          script.type = 'text/javascript';
          script.src = src;

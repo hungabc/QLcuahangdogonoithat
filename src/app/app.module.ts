@@ -13,6 +13,9 @@ import { KhongthayComponent } from './shared/khongthay/khongthay.component';
 // import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 // import { CheckoutComponent } from './cart/checkout/checkout.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SharedModule } from './shared/shared.module';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +34,7 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,HttpClientModule,SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
