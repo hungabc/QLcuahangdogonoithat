@@ -4,11 +4,11 @@
             <div class="category-featured Vegetables">
                 <nav class="navbar nav-menu show-brand">
                     <div class="container">
-                        <div class="navbar-brand"><a href="#"> <img alt="fashion" src="assets/images/check_mark.png" />Từ khóa "{{$keywords}}"</a></div>
+                        <div class="navbar-brand"><a href="#"> <img alt="fashion" src="assets/images/check_mark.png" />Từ khóa ""</a></div>
                         <div class="collapse navbar-collapse">
                         
                         </div>
-                    <label>có {{$search_product->count()}} kết quả </label>
+                    <label>có  kết quả </label>
                     <!-- hàm coutn để đếm số phần tử của mảng -->
                     </div>
                 </nav>
@@ -16,7 +16,6 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="box-right">
-                            @foreach($search_product as $val)
                                     <ul class="product-list">
                                         <li class="col-sm-4 product-item">
                                             <div class="left-block">
@@ -37,16 +36,15 @@
                                                 <div class="icon-sale7"></div>
                                             </div>
                                             <div class="right-block">
-                                                <h5 class="product-name"><a href="{{URL::to('/chitiet/'.$val->id)}}">{{$val->tensp}}</a></h5>
+                                                <h5 class="product-name"><a href=""></a></h5>
                                             </div>
                                             <div class="content_price">
                                                 <div class="content_price">
-                                                    <span class="price product-price"><span style="color: black"></span>{{number_format($val->gianhap)}} Đồng</span>
+                                                    <span class="price product-price"><span style="color: black"></span> Đồng</span>
                                                 </div>
                                             </div>
                                         </li>
                                     </ul>
-                                    @endforeach
                             </div>
                         </div>
                     </div>

@@ -27,17 +27,17 @@
                     <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
                         data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
                         data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
-                        
-                        <li>
+                        <ng-container *ngFor="let item of list">
+                            <li class="col-sm-4 product-item">
                             <div class="left-block">
                                 <a routerLink="">
                                     <img class="img-responsive" alt="product"list_item
-                                         src="assets/images/hinhanh/Products/" />
+                                         src="" />
                                 </a>
                                 <div class="quick-view">
                                     <a title="Tương tác" class="heart" routerLink="#"></a>
                                     <a title="So sánh đồng giá" class="compare" routerLink="#"></a>
-                                    <a title="Quick view" routerLink="assets/images/hinhanh/Products/" class="search fancybox-button"></a>
+                                    <a title="Quick view" routerLink="assets/images/hinhanh/Products/{{item.hinh}}" class="search fancybox-button"></a>
                                 </div>
                                 <div class="add-to-cart">
                                     <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"  data-name=""
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </li>
-                   
+                    </ng-container>
                     </ul>
                 </div>
             </div>
@@ -76,20 +76,19 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="box-right">
-          
                                     <ul class="product-list">
                                         <ng-container *ngFor="let item of list">
                                         <li class="col-sm-4 product-item">
                                             <div class="left-block">
                                                 <a routerLink="">
                                                     <img class="img-responsive" alt="Sản Phẩm Chi Tiết"
-                                                         src="assets/images/hinhanh/Products/" />
+                                                         src="assets/images/hinhanh/Products/{{item.hinh}}" />
                                                 </a>
 
                                                 <div class="quick-view">
                                                     <a title="Tương tác" class="heart" routerLink="#"></a>
                                                     <a title="So sánh sản phẩm đồng giá" class="compare" routerLink="#"></a>
-                                                    <a title="Quick view" routerLink="assets/images/hinhanh/Products/" class="search fancybox-button"></a>
+                                                    <a title="Quick view" routerLink="assets/images/hinhanh/Products/{{item.hinh}}" class="search fancybox-button"></a>
                                                 </div>
                                                 <div class="add-to-cart">
                                                     <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng" data-name=""
@@ -108,62 +107,12 @@
                                         </li>
                                     </ng-container>
                                     </ul>
-                              
                             </div>
                         </div>
                     </div>
-                    {{totalItems}}
                     <!-- nút phân trang -->
                     <div class="shop_toolbar t_bottom">
                         <ngb-pagination [collectionSize]="totalItems" [pageSize]="pageSize" [(page)]="page" [maxSize]="10" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
-                    </div>
-                </div>
-            </div>
-            <div class="category-featured Vegetables">
-                <nav class="navbar nav-menu show-brand">
-                    <div class="container">
-                        <div class="navbar-brand"><a routerLink="#"> <img alt="Sắp ra mắt" src="assets/images/refresh.png" /> Sắp Ra Mắt</a></div>
-                        <div class="collapse navbar-collapse">
-                        </div>
-                    </div>
-                </nav>
-                <div class="product-featured clearfix">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="box-right">
-                                <ul class="product-list">
-                               
-                                        <li class="col-sm-4 product-item">
-                                            <div class="left-block">
-                                                <a routerLink="">
-                                                    <img class="img-responsive" alt="product"
-                                                         src="assets/images/hinhanh/Products/" />
-                                                </a>
-                                                <div class="quick-view">
-                                                    <a title="Tương tác" class="heart" routerLink="#"></a>
-                                                    <a title="So sánh đồng giá" class="compare" routerLink="#"></a>
-                                                    <a title="Quick view" routerLink="assets/images/hinhanh/Products/" class="search fancybox-button"></a>
-                                                </div>
-                                                <div class="add-to-cart">
-                                                    <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"  data-name=""
-                                                       data-price="" data-image="}" data-product-code="">Thêm Vào Giỏ Hàng</a>
-                                                </div>
-                                                <div class="comingsoon"></div>
-                                            </div>
-                                            <div class="right-block">
-                                                <h5 class="product-name"><a routerLink=""></a></h5>
-                                                <div class="content_price">
-                                                    <span class="price product-price"><span style="color: black"></span> VNĐ</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                
-                                </ul>
-                            </div>
-                            
-                            <!-- nút phân trang -->
-                            <br />
-                        </div>
                     </div>
                 </div>
             </div>

@@ -48,8 +48,9 @@
                                             <li class="block-container">
                                                 <ul class="block">
                                 
-                                                    
-                                                        <li class="link_container"><a routerLink="">Loại</a></li>
+                                                    <ng-container *ngFor="let l of menus">
+                                                        <li class="link_container"><a routerLink="san-pham/{{l.url}}">{{l.tenloai}}</a></li>
+                                                    </ng-container>
                                                   
                                                 </ul>
                                             </li>

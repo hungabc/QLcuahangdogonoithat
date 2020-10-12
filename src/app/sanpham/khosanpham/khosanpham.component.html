@@ -8,35 +8,32 @@
                 <div class="latest-deals-product">
                     <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
                         data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
-                        data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
-                        <?php foreach($k as $val) { ?>
+                        data-responsive=>
                         <li>
                             <div class="left-block">
-                                <a href="{{URL::to('/chitiet/'.$val->id)}}">
+                                <a href="">
                                     <img class="img-responsive" alt="product"
-                                         src="assets/images/hinhanh/Products/{{$val->anh}}" />
+                                         src="assets/images/hinhanh/Products/" />
                                 </a>
                                 <div class="quick-view">
                                     <a title="Tương tác" class="heart" href="#"></a>
                                     <a title="So sánh đồng giá" class="compare" href="#"></a>
-                                    <a title="Quick view" href="assets/images/hinhanh/Products/{{$val->anh}}" class="search fancybox-button"></a>
+                                    <a title="Quick view" href="assets/images/hinhanh/Products/" class="search fancybox-button"></a>
                                 </div>
                                 <div class="add-to-cart">
-                                    <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"  data-name="{{$val->tensp}}"
-                                       data-price="{{$val->gianhap}}" data-image="{{$val->anh}}" data-product-code="{{$val->id}}">Thêm Vào Giỏ Hàng</a>
+                                    <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"  data-name=""
+                                       data-price="" data-image="" data-product-code="">Thêm Vào Giỏ Hàng</a>
                                 </div>
                             </div>
                             <div class="right-block">
-                                <h5 class="product-name"><a href="{{URL::to('/chitiet/'.$val->id)}}">{{$val->tensp}}</a></h5>
+                                <h5 class="product-name"><a href=""></a></h5>
                                 <div class="content_price">
                                     <div class="content_price">
-                                        <span class="price product-price"><span style="color: black"></span>{{number_format($val->gianhap)}} VNĐ</span>
+                                        <span class="price product-price"><span style="color: black"></span> VNĐ</span>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <?php } ?>
-                    </ul>
                 </div>
             </div>
         </div>

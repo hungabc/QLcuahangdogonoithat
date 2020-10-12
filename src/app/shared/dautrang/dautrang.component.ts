@@ -1,46 +1,27 @@
-import { AfterViewInit, Component, OnInit,Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, Injector, OnInit,Renderer2 } from '@angular/core';
+import { BaseComponent } from 'src/app/lib/base.component';
 
 @Component({
   selector: 'app-dautrang',
   templateUrl: './dautrang.component.html',
   styleUrls: ['./dautrang.component.css']
 })
-export class DautrangComponent implements OnInit,AfterViewInit {
-
-  constructor(private renderer: Renderer2) { }
+export class DautrangComponent extends BaseComponent implements OnInit {
+menus:any;
+total:any;
+  constructor( injector:Injector) { 
+    super(injector)
+  }
 
   ngOnInit(): void {
-  }
-  ngAfterViewInit() { 
-    this.loadScripts();
-  }
-  public loadScripts() {
-    //tạm thời
-    this.renderExternalScript('assets/js/layout.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/shopingCart.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/jquery.actual.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/login.js').onload = () => {
-    }
-     this.renderExternalScript('assets/js/checkout.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/contact-us.js').onload = () => {
-    }
-     this.renderExternalScript('assets/js/theme-script.js').onload = () => {
-    }
-    this.renderExternalScript('assets/js/option4.js').onload = () => {
-    }
-    
-  }
-  public renderExternalScript(src: string): HTMLScriptElement {
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = src;
-    script.async = true;
-    script.defer = true;
-    this.renderer.appendChild(document.body, script);
-    return script;
+    this._api.get('api/Loaisp/get-all').takeUntil(this.unsubscribe).subscribe(res => {
+      this.menus = res;
+    }); 
+    this._cart.items.subscribe((res) => {
+      this.total = res? res.length:0;
+    });
+    setTimeout(() => {
+      this.loadScripts();
+    });
   }
 }
