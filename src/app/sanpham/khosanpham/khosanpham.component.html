@@ -1,0 +1,44 @@
+<div class="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <h2 class="page-heading">
+                    <span class="page-heading-title"><img alt="fashion" src="assets/images/icon-new7.png" /> Tất Cả Sản Phẩm</span>
+                </h2>
+                <div class="latest-deals-product">
+                    <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
+                        data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
+                        data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
+                        <?php foreach($k as $val) { ?>
+                        <li>
+                            <div class="left-block">
+                                <a href="{{URL::to('/chitiet/'.$val->id)}}">
+                                    <img class="img-responsive" alt="product"
+                                         src="assets/images/hinhanh/Products/{{$val->anh}}" />
+                                </a>
+                                <div class="quick-view">
+                                    <a title="Tương tác" class="heart" href="#"></a>
+                                    <a title="So sánh đồng giá" class="compare" href="#"></a>
+                                    <a title="Quick view" href="assets/images/hinhanh/Products/{{$val->anh}}" class="search fancybox-button"></a>
+                                </div>
+                                <div class="add-to-cart">
+                                    <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"  data-name="{{$val->tensp}}"
+                                       data-price="{{$val->gianhap}}" data-image="{{$val->anh}}" data-product-code="{{$val->id}}">Thêm Vào Giỏ Hàng</a>
+                                </div>
+                            </div>
+                            <div class="right-block">
+                                <h5 class="product-name"><a href="{{URL::to('/chitiet/'.$val->id)}}">{{$val->tensp}}</a></h5>
+                                <div class="content_price">
+                                    <div class="content_price">
+                                        <span class="price product-price"><span style="color: black"></span>{{number_format($val->gianhap)}} VNĐ</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

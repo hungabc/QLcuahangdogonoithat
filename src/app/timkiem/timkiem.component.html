@@ -1,1 +1,57 @@
-<p>timkiem works!</p>
+<div class="page-top">
+    <div class="content-page">
+        <div class="container">
+            <div class="category-featured Vegetables">
+                <nav class="navbar nav-menu show-brand">
+                    <div class="container">
+                        <div class="navbar-brand"><a href="#"> <img alt="fashion" src="assets/images/check_mark.png" />Từ khóa "{{$keywords}}"</a></div>
+                        <div class="collapse navbar-collapse">
+                        
+                        </div>
+                    <label>có {{$search_product->count()}} kết quả </label>
+                    <!-- hàm coutn để đếm số phần tử của mảng -->
+                    </div>
+                </nav>
+                <div class="product-featured clearfix">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="box-right">
+                            @foreach($search_product as $val)
+                                    <ul class="product-list">
+                                        <li class="col-sm-4 product-item">
+                                            <div class="left-block">
+                                                <a href="">
+                                                    <img class="img-responsive" alt="Sản Phẩm Chi Tiết"
+                                                         src="assets/images/hinhanh/Products" />
+                                                </a>
+
+                                                <div class="quick-view">
+                                                    <a title="Tương tác" class="heart" href="#"></a>
+                                                    <a title="So sánh sản phẩm đồng giá" class="compare" href="#"></a>
+                                                    <a title="Quick view" href="assets/images/hinhanh/Products" class="search fancybox-button"></a>
+                                                </div>
+                                                <div class="add-to-cart">
+                                                    <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng" data-name=""
+                                                       data-price="" data-image="" data-product-code="">Thêm Vào Giỏ Hàng</a>
+                                                </div>
+                                                <div class="icon-sale7"></div>
+                                            </div>
+                                            <div class="right-block">
+                                                <h5 class="product-name"><a href="{{URL::to('/chitiet/'.$val->id)}}">{{$val->tensp}}</a></h5>
+                                            </div>
+                                            <div class="content_price">
+                                                <div class="content_price">
+                                                    <span class="price product-price"><span style="color: black"></span>{{number_format($val->gianhap)}} Đồng</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

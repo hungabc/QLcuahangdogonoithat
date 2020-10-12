@@ -4,7 +4,6 @@ import { BaseComponent } from '../lib/base.component';
 import 'rxjs/add/observable/combineLatest';
 import 'rxjs/add/operator/takeUntil';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -23,7 +22,6 @@ export class HomeComponent  extends BaseComponent implements OnInit {
       this._api.get('api/SanPham/get-all'),
     ).takeUntil(this.unsubscribe).subscribe(res => {
       this.list_item = res[0];
-     
     }, err => { });
     this.list = [];
     this.page = 1;
@@ -35,8 +33,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
         }, err => { });       
    });    
    }
-  
-  loadPage(page) { 
+    loadPage(page) { 
     this._route.params.subscribe(params => {
       let id = params['id'];
       this._api.post('api/SanPham/sp-phan-trang', { page: page, pageSize: this.pageSize, item_group_id: id}).takeUntil(this.unsubscribe).subscribe(res => {

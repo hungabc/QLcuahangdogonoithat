@@ -4,6 +4,7 @@ import {ChitietspComponent} from '../sanpham/chitietsp/chitietsp.component';
 import { SanphamRoutingModule } from './sanpham.routing-module';
 import { SanphamComponent } from './sanpham.component';
 import { SptheoloaiComponent } from './sptheoloai/sptheoloai.component';
+import { KhosanphamComponent } from './khosanpham/khosanpham.component';
 
 
 
@@ -11,7 +12,7 @@ import { SptheoloaiComponent } from './sptheoloai/sptheoloai.component';
 
 @NgModule({
   declarations: [
-    ChitietspComponent,SanphamComponent, SptheoloaiComponent
+    ChitietspComponent,SanphamComponent, SptheoloaiComponent, KhosanphamComponent
   ],
   imports: [
     CommonModule,
