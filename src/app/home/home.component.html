@@ -27,17 +27,15 @@
                     <ul class="product-list owl-carousel" data-dots="false" data-loop="true" data-nav="true"
                         data-margin="10" data-autoplayTimeout="1000" data-autoplayHoverPause="true"
                         data-responsive='{"0":{"items":1},"600":{"items":3},"1000":{"items":5}}'>
-                        <ng-container *ngFor="let item of list">
                             <li class="col-sm-4 product-item">
                             <div class="left-block">
                                 <a routerLink="">
-                                    <img class="img-responsive" alt="product"list_item
-                                         src="" />
+                                    <img class="img-responsive" alt="Loading..." list_item src="" />
                                 </a>
                                 <div class="quick-view">
                                     <a title="Tương tác" class="heart" routerLink="#"></a>
                                     <a title="So sánh đồng giá" class="compare" routerLink="#"></a>
-                                    <a title="Quick view" routerLink="assets/images/hinhanh/Products/{{item.hinh}}" class="search fancybox-button"></a>
+                                    <a title="Quick view" routerLink="" class="search fancybox-button"></a>
                                 </div>
                                 <div class="add-to-cart">
                                     <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"  data-name=""
@@ -53,7 +51,6 @@
                                 </div>
                             </div>
                         </li>
-                    </ng-container>
                     </ul>
                 </div>
             </div>
@@ -81,7 +78,7 @@
                                         <li class="col-sm-4 product-item">
                                             <div class="left-block">
                                                 <a routerLink="">
-                                                    <img class="img-responsive" alt="Sản Phẩm Chi Tiết"
+                                                    <img class="img-responsive" alt="Loading..."
                                                          src="assets/images/hinhanh/Products/{{item.hinh}}" />
                                                 </a>
 
@@ -92,7 +89,7 @@
                                                 </div>
                                                 <div class="add-to-cart">
                                                     <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng" data-name=""
-                                                       data-price="" data-image="" data-product-code="">Thêm Vào Giỏ Hàng</a>
+                                                       data-price="{{item.gia}}" data-image="{{item.hinh}}" data-product-code="{{item.masp}}">Thêm Vào Giỏ Hàng</a>
                                                 </div>
                                                 <div class="icon-sale7"></div>
                                             </div>
