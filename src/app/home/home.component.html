@@ -81,7 +81,6 @@
                                                     <img class="img-responsive" alt="Loading..."
                                                          src="assets/images/hinhanh/Products/{{item.hinh}}" />
                                                 </a>
-
                                                 <div class="quick-view">
                                                     <a title="Tương tác" class="heart" routerLink="#"></a>
                                                     <a title="So sánh sản phẩm đồng giá" class="compare" routerLink="#"></a>
@@ -98,7 +97,7 @@
                                             </div>
                                             <div class="content_price">
                                                 <div class="content_price">
-                                                    <span class="price product-price"><span style="color: black"></span>{{item.gia}} VNĐ</span>
+                                                    <span class="price product-price"><span style="color: black"></span>{{item.gia | currency:'VND':true:'1.0-2'}}</span>
                                                 </div>
                                             </div>
                                         </li>

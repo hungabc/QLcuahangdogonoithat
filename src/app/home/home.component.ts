@@ -36,7 +36,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
     loadPage(page) { 
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.post('api/SanPham/sp-phan-trang', { page: page, pageSize: this.pageSize, item_group_id: id}).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.post('api/SanPham/sp-phan-trang', { page: page, pageSize: this.pageSize, MALOAI: id}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       
