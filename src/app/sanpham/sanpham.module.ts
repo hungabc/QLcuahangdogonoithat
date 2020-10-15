@@ -4,19 +4,16 @@ import {ChitietspComponent} from '../sanpham/chitietsp/chitietsp.component';
 import { SanphamRoutingModule } from './sanpham.routing-module';
 import { SanphamComponent } from './sanpham.component';
 import { SptheoloaiComponent } from './sptheoloai/sptheoloai.component';
-import { KhosanphamComponent } from './khosanpham/khosanpham.component';
-
-
-
-
+import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    ChitietspComponent,SanphamComponent, SptheoloaiComponent, KhosanphamComponent
+    ChitietspComponent,SanphamComponent, SptheoloaiComponent
   ],
   imports: [
     CommonModule,
-    SanphamRoutingModule
+    SanphamRoutingModule,SharedModule
   ]
 })
 export class SanphamModule { }

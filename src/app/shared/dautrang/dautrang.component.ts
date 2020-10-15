@@ -12,7 +12,6 @@ total:any;
   constructor( injector:Injector) { 
     super(injector)
   }
-
   ngOnInit(): void {
     this._api.get('api/Loaisp/get-all').takeUntil(this.unsubscribe).subscribe(res => {
       this.menus = res;

@@ -16,12 +16,10 @@
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 group-button-header">
                 <a title="Trang Quản Trị" href="#" class="btn-compare">Quản Trị</a>
                 <a title="Đăng Kí" href="" class="btn-heart" data-toggle="modal" data-target="#myModal" >Đăng Kí</a>
-
                 <div class="btn-cart" id="cart-block">
                     <a title="Đăng Nhập" href="" data-toggle="modal" data-target="#myModal">Đăng Nhập</a>
                 </div>
             </div>
-
         </div>
     </div>
     <!-- END MANIN HEADER -->
@@ -42,16 +40,14 @@
                                 <ul class="nav navbar-nav">
                                     <li class="active"><a routerLink=""><span class="fa fa-home"></span>TRANG CHỦ</a></li>
                                     <li class="dropdown">
-                                        <a routerLink="" class="dropdown-toggle"
+                                        <a routerLink="san-pham" class="dropdown-toggle"
                                            data-toggle="dropdown">SẢN PHẨM</a>
                                         <ul class="dropdown-menu container-fluid">
                                             <li class="block-container">
                                                 <ul class="block">
-                                
                                                     <ng-container *ngFor="let l of menus">
                                                         <li class="link_container"><a routerLink="san-pham/{{l.url}}">{{l.tenloai}}</a></li>
                                                     </ng-container>
-                                                  
                                                 </ul>
                                             </li>
                                         </ul>
@@ -148,7 +144,7 @@
                             <!-- REGISTER -->
                             <div class="tab-pane fade" id="Registration">
                                 <form class="form-horizontal" name="dangkytk_form" action="" method="post"
-                                      enctype="multipart/form-data" id="dangkytk_form register">
+                                      enctype="multipart/form-data" id="">
                                    
                                     <div class="form-group">
                                         <label for="frm_name" class="col-sm-4 control-label">Họ tên</label>

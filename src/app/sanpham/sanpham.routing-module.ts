@@ -8,12 +8,9 @@ import { SptheoloaiComponent } from './sptheoloai/sptheoloai.component';
 const routes: Routes = [
 { path:'',component:SanphamComponent
 },
-{
-  path:'loai/:id',component:SptheoloaiComponent
-},
-{path:'chi-tiet',component:ChitietspComponent}
+{path:'sptheoloai',component:SptheoloaiComponent},
+{path:'chi-tiet',component:ChitietspComponent},
 ];
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
