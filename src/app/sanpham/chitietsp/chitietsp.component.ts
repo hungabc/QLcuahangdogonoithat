@@ -7,25 +7,25 @@ import { BaseComponent } from 'src/app/lib/base.component';
   styleUrls: ['./chitietsp.component.css']
 })
 export class ChitietspComponent extends BaseComponent implements OnInit {
-
-  constructor(injector: Injector) { 
-    super(injector);
+  item:any;
+  total:any;
+    constructor( injector:Injector) { 
+      super(injector)
+    }
+    ngOnInit(): void {
+      this.item = {};
+    this._route.params.subscribe(params => {
+      let id = params['id'];
+      this._api.get('/api/sanpham/gettheomasp/'+id).takeUntil(this.unsubscribe).subscribe(res => {
+        this.item = res;
+        setTimeout(() => {
+          this.loadScripts();
+        });
+      }); 
+    });
+    }
+  addToCart(it) { 
+    this._cart.addToCart(it);
+    alert('Thêm thành công!'); 
   }
-
-  ngOnInit(): void {
-    // Observable.combineLatest(
-    //   this._api.get('/api/item/get-all'),
-    // ).takeUntil(this.unsubscribe).subscribe(res => {
-    //   this.list_item = res[0];
-       setTimeout(() => {
-        this.loadScripts();
-       });
-  //   }, err => { });
-  // }
-  
-  // addToCart(it) { 
-  //   this._cart.addToCart(it);
-  //   alert('Thêm thành công!'); 
-  // }
-}
 }

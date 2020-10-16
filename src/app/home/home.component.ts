@@ -19,7 +19,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
    }
   ngOnInit(): void {
     Observable.combineLatest(
-      this._api.get('api/SanPham/get-all'),
+      this._api.get('/api/SanPham/get-all'),
     ).takeUntil(this.unsubscribe).subscribe(res => {
       this.list_item = res[0];
     }, err => { });
@@ -27,7 +27,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
     this.page = 1;
     this.pageSize = 10;
     this._route.params.subscribe(params => {
-      this._api.post('api/SanPham/sp-phan-trang', { page: this.page, pageSize: this.pageSize}).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.post('/api/SanPham/sp-phan-trang', { page: this.page, pageSize: this.pageSize}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       
@@ -36,7 +36,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
     loadPage(page) { 
     this._route.params.subscribe(params => {
       let id = params['id'];
-      this._api.post('api/SanPham/sp-phan-trang', { page: page, pageSize: this.pageSize, MALOAI: id}).takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.post('/api/SanPham/sp-phan-trang', { page: page, pageSize: this.pageSize, MALOAI: id}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       

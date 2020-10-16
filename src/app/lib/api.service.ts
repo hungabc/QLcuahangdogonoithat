@@ -8,7 +8,7 @@ import { throwError as observableThrowError } from 'rxjs';
   providedIn: 'root',
 })
 export class ApiService {
-  public host = 'https://localhost:44334/';
+  public host = 'https://localhost:44334';
   constructor(private _http: HttpClient, public router: Router) {}
 
   post(url: string, obj: any) {
@@ -51,7 +51,7 @@ export class ApiService {
       );
   }
   public handleError(error: any) {
-    this.router.navigate(['/err']);
+   // this.router.navigate(['/err']);
     return observableThrowError(error);
   }
 }

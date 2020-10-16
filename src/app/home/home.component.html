@@ -63,7 +63,7 @@
             <div class="category-featured Vegetables">
                 <nav class="navbar nav-menu show-brand">
                     <div class="container">
-                        <div class="navbar-brand"><a routerLink="shop"> <img alt="fashion" src="assets/images/check_mark.png" />Sản Phẩm</a></div>
+                        <div class="navbar-brand"><a routerLink="san-pham"> <img alt="fashion" src="assets/images/check_mark.png" />Sản Phẩm</a></div>
                         <div class="collapse navbar-collapse">
 
                         </div>
@@ -93,7 +93,7 @@
                                                 <div class="icon-sale7"></div>
                                             </div>
                                             <div class="right-block">
-                                                <h5 class="product-name"><a routerLink="">{{item.tensp}}</a></h5>
+                                                <h5 class="product-name"><a [routerLink]="['/sanpham/chitiet',item.masp]">{{item.tensp}}</a></h5>
                                             </div>
                                             <div class="content_price">
                                                 <div class="content_price">

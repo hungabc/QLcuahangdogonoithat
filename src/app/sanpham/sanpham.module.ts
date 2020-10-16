@@ -9,7 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    ChitietspComponent,SanphamComponent, SptheoloaiComponent
+    ChitietspComponent,SanphamComponent, SptheoloaiComponent, 
   ],
   imports: [
     CommonModule,

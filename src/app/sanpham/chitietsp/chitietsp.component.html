@@ -2,19 +2,17 @@
     <div class="container" id="columns">
         <div class="row">
             <div class="column col-xs-12 col-sm-3" id="left_column">
+                 
                 <div class="block left-module">
                     <p class="title_block"><span class="fa fa-pagelines"></span>SẢN PHẨM</p>
                     <div class="block_content">
                         <div class="layered layered-category">
                             <div class="layered-content">
                                 <ul class="tree-menu">
-                                                <li class="#">
-                                                    <span><a routerLink="" ></a></span>
-                                                </li>
+                                    <li class="link_container"><a routerLink=""></a></li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -33,23 +31,23 @@
                                                     <div class="left-block">
                                                         <a routerLink="">
                                                             <img class="img-responsive" alt="product"
-                                                                 src="assets/images/hinhanh/Products/" />
+                                                                 src="assets/images/hinhanh/Products/{{item.hinh}}" />
                                                         </a>
                                                         <div class="quick-view">
                                                             <a title="Add to my wishlist" class="heart" routerLink="#"></a>
                                                             <a title="Add to compare" class="compare" routerLink="#"></a>
-                                                            <a title="Quick view" routerLink="assets/images/hinhanh/Products/" class="search fancybox-button"></a>
+                                                            <a title="Quick view"  class="search fancybox-button"></a>
                                                         </div>
                                                         <div class="add-to-cart">
-                                                            <a class="add-item-to-cart" title="Giỏ Hàng" onclick="muahang('')" data-name=""
+                                                            <a class="add-item-to-cart" title="Giỏ Hàng" onclick="muahang('')" data-name="{{item.tensp}}"
                                                                data-price="" data-image="" data-product-code="">Thêm vào giỏ hàng</a>
                                                         </div>
                                                     </div>
                                                     <div class="right-block">
-                                                        <h5 class="product-name"><a routerLink=""></a></h5>
+                                                        <h5 class="product-name"><a>{{item.tensp}}</a></h5>
                                                         <div class="content_price">
                                                             <div class="content_price">
-                                                                <span class="price product-price"><span style="color: black"></span> VNĐ</span>
+                                                                <span class="price product-price"><span style="color: black"></span>{{item.gia | currency:'VND':true:'1.0-2'}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
