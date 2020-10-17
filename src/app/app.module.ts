@@ -15,15 +15,15 @@ import { LoginComponent } from './login/login.component';
 // import { CheckoutComponent } from './cart/checkout/checkout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
-import { ThongtinComponent } from './thongtin/thongtin.component';
-import { LienheComponent } from './thongtin/lienhe/lienhe.component';
-import { GioithieuComponent } from './thongtin/gioithieu/gioithieu.component';
-import { TuvanComponent } from './tuvan/tuvan.component';
-import { PhongkhachComponent } from './tuvan/phongkhach/phongkhach.component';
-import { PhonganComponent } from './tuvan/phongan/phongan.component';
-import { PhongbepComponent } from './tuvan/phongbep/phongbep.component';
-import { PhonglamviecComponent } from './tuvan/phonglamviec/phonglamviec.component';
-import { PhongnguComponent } from './tuvan/phongngu/phongngu.component';
+//import { ThongtinComponent } from './thongtin/thongtin.component';
+//import { LienheComponent } from './thongtin/lienhe/lienhe.component';
+//import { GioithieuComponent } from './thongtin/gioithieu/gioithieu.component';
+//import { TuvanComponent } from './tuvan/tuvan.component';
+//import { PhongkhachComponent } from './tuvan/phongkhach/phongkhach.component';
+//mport { PhonganComponent } from './tuvan/phongan/phongan.component';
+//import { PhongbepComponent } from './tuvan/phongbep/phongbep.component';
+//import { PhonglamviecComponent } from './tuvan/phonglamviec/phonglamviec.component';
+//import { PhongnguComponent } from './tuvan/phongngu/phongngu.component';
 
 
 @NgModule({
@@ -39,15 +39,15 @@ import { PhongnguComponent } from './tuvan/phongngu/phongngu.component';
     KhongthayComponent,
     // CartComponent,
     LoginComponent,
-    ThongtinComponent,
-    LienheComponent,
-    GioithieuComponent,
-    TuvanComponent,
-    PhongkhachComponent,
-    PhonganComponent,
-    PhongbepComponent,
-    PhonglamviecComponent,
-    PhongnguComponent,
+    //ThongtinComponent,
+    //LienheComponent,
+    //GioithieuComponent,
+    //TuvanComponent,
+    //PhongkhachComponent,
+    //PhonganComponent,
+    //PhongbepComponent,
+    //PhonglamviecComponent,
+    //PhongnguComponent,
     // CheckoutComponent
   ],
   imports: [

@@ -12,15 +12,22 @@ import 'rxjs/add/operator/takeUntil';
 export class SptheoloaiComponent extends BaseComponent implements OnInit {
   sploai: any;
   index:any;
+  menus:any;
   page: any;
   pageSize: any;
   allloai:any;
   totalItems:any;
   MALOAI:any;
+  tenloai: any;
   constructor(injector: Injector) { 
     super(injector);
   }
   ngOnInit(): void {
+    this._api.get('/api/Loaisp/get-all').takeUntil(this.unsubscribe).subscribe(res => {
+      this.menus = res;
+      
+    }); 
+
     if(this.index==0||this.index==null) this.index=1;
     if(this.pageSize<10||this.pageSize==null) this.pageSize=10;
     this.sploai = [];
@@ -28,14 +35,15 @@ export class SptheoloaiComponent extends BaseComponent implements OnInit {
     this.pageSize = 10;
     this._route.params.subscribe(params => {
       this.MALOAI=params["id"];
+      console.log(this.MALOAI);
       
-      this._api.get('api/sanpham/sp-theo-loai/phong-ngu/1/12').takeUntil(this.unsubscribe).subscribe(res => {
-        this.sploai = res.data;
-        this.totalItems = res.totalItems;
+      this._api.get('/api/Sanpham/sp-theo-loai/'+this.MALOAI+'/1/10').takeUntil(this.unsubscribe).subscribe(ress => {
+        this.sploai = ress;
+        
         setTimeout(() => {
          this.loadScripts(); 
         });
-        }, err => { });       
+        }, err => { });   
    });    
    }
  

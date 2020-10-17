@@ -8,7 +8,9 @@
                         <div class="layered layered-category">
                             <div class="layered-content">
                                 <ul class="tree-menu">
-                                        <li class="link_container"><a routerLink=""></a></li>    
+                                    <ng-container *ngFor="let i of menus">
+                                        <li class="link_container"><a routerLink="/san-pham/sploai/{{i.url}}">{{i.tenloai}}</a></li> 
+                                    </ng-container>
                                 </ul>
                             </div>
                         </div>
@@ -27,28 +29,28 @@
                                 <div class="col-sm-12">
                                     <div class="box-right">
                                         <ul class="product-list">
-                                            <ng-container *ngFor="let i of sploai">
+                                            <ng-container *ngFor="let itemsploai of sploai">
                                                 <li class="col-sm-4 product-item" style="width: 280px;">
                                                     <div class="left-block">
                                                         <a routerLink="">
                                                             <img class="img-responsive" alt="Loading..."
-                                                                 src="assets/images/hinhanh/Products/{{i.hinh}}" />
+                                                                 src="assets/images/hinhanh/Products/{{itemsploai.hinh}}" />
                                                         </a>
                                                         <div class="quick-view">
                                                             <a title="Add to my wishlist" class="heart" routerLink="#"></a>
                                                             <a title="Add to compare" class="compare" routerLink="#"></a>
-                                                            <a title="Quick view" routerLink="assets/images/hinhanh/Products/{{i.hinh}}" class="search fancybox-button"></a>
+                                                            <a title="Quick view" src="assets/images/hinhanh/Products/{{itemsploai.hinh}}" class="search fancybox-button"></a>
                                                         </div>
                                                         <div class="add-to-cart">
                                                             <a class="add-item-to-cart" title="Giỏ Hàng" onclick="muahang('')" data-name=""
-                                                               data-price="{{item.gia}}" data-image="{{i.hinh}}" data-product-code="{{i.masp}}">Thêm vào giỏ hàng</a>
+                                                               data-price="" data-image="" data-product-code="">Thêm vào giỏ hàng</a>
                                                         </div>
                                                     </div>
                                                     <div class="right-block">
-                                                        <h5 class="product-name"><a routerLink=""></a>{{i.tensp}}</h5>
+                                                        <h5 class="product-name"><a routerLink=""></a>{{itemsploai.tensp}}</h5>
                                                         <div class="content_price">
                                                             <div class="content_price">
-                                                                <span class="price product-price"><span style="color: black"></span>{{item.gia | currency:'VND':true:'1.0-2'}}</span>
+                                                                <span class="price product-price"><span style="color: black"></span>{{itemsploai.gia | currency:'VND':true:'1.0-2'}}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -59,21 +61,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="sortPagiBar">
-                    <div class="bottom-pagination">
-                        <nav>
-                            <ul class="pagination">
-                                <li class="active"><a routerLink="product-vegetables.html">1</a></li>
-                                <li><a routerLink="product-vegetables-2.html">2</a></li>
-                                <li>
-                                    <a routerLink="#" aria-label="Next">
-                                        <span aria-hidden="true">Next &raquo;</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ export class SanphamComponent extends BaseComponent implements OnInit {
       super(injector)
     }
     ngOnInit(): void {
-      this._api.get('api/Sanpham/get-all').takeUntil(this.unsubscribe).subscribe(res => {
+      this._api.get('/api/Sanpham/get-all').takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res;
       }); 
       this._cart.items.subscribe((res) => {

@@ -11,6 +11,7 @@ import 'rxjs/add/operator/takeUntil';
 })
 export class HomeComponent  extends BaseComponent implements OnInit {
   list_item:any; list: any;
+  item:any;
     page: any;
     pageSize: any;
     totalItems:any;
@@ -29,6 +30,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
     this._route.params.subscribe(params => {
       this._api.post('/api/SanPham/sp-phan-trang', { page: this.page, pageSize: this.pageSize}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
+        this.item = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       
    });    
@@ -38,6 +40,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
       let id = params['id'];
       this._api.post('/api/SanPham/sp-phan-trang', { page: page, pageSize: this.pageSize, MALOAI: id}).takeUntil(this.unsubscribe).subscribe(res => {
         this.list = res.data;
+        this.item = res.data;
         this.totalItems = res.totalItems;
         }, err => { });       
    });   

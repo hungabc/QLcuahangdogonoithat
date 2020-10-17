@@ -3,7 +3,7 @@
     <div class="container main-header">
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 logo">
-                <a routerLink=""><img alt="Gỗ Trang Trí" src="assets/images/logo.png" /></a>
+                <a routerLink="/"><img alt="Gỗ Trang Trí" src="assets/images/logo.png" /></a>
             </div>
             <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
                 <form class="form-inline" action=""method="post" id="header-search">
@@ -38,7 +38,7 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a routerLink=""><span class="fa fa-home"></span>TRANG CHỦ</a></li>
+                                    <li class="active"><a routerLink="/"><span class="fa fa-home"></span>TRANG CHỦ</a></li>
                                     <li class="dropdown">
                                         <a routerLink="san-pham" class="dropdown-toggle"
                                            data-toggle="dropdown">SẢN PHẨM</a>
@@ -46,7 +46,7 @@
                                             <li class="block-container">
                                                 <ul class="block">
                                                     <ng-container *ngFor="let l of menus">
-                                                        <li class="link_container"><a routerLink="sanpham/{{l.url}}">{{l.tenloai}}</a></li>
+                                                        <li class="link_container"><a routerLink="san-pham/sploai/{{l.url}}">{{l.tenloai}}</a></li>
                                                     </ng-container>
                                                 </ul>
                                             </li>
@@ -115,21 +115,17 @@
                         <div class="tab-content">
                             <!-- LOGIN -->
                             <div class="tab-pane active" id="Login">
-                                <form action="" name="dangnhap_from"  class="form-horizontal"
-                                      id="" method="post">
-                                   
+                                <form action="" name="dangnhap_from"  class="form-horizontal" id="" method="post">
                                     <div class="form-group">
                                         <label for="email_login" class="col-sm-3 control-label">Email</label>
                                         <div class="col-sm-9">
-                                            <input type="email" class="input form-control" name="email" id="email"
-                                                   placeholder="Email...." />
+                                            <input type="email" class="input form-control" name="email" id="email" placeholder="Email...." />
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="pass_login" class="col-sm-3 control-label">Mật Khẩu</label>
                                         <div class="col-sm-9">
-                                            <input type="password" class="input form-control" name="mk" id="mk"
-                                                   placeholder="Mật khẩu" />
+                                            <input type="password" class="input form-control" name="mk" id="mk" placeholder="Mật khẩu" />
                                         </div>
                                     </div>
                                     <div class="row">
@@ -145,10 +141,8 @@
                             <div class="tab-pane fade" id="Registration">
                                 <form class="form-horizontal" name="dangkytk_form" action="" method="post"
                                       enctype="multipart/form-data" id="">
-                                   
                                     <div class="form-group">
                                         <label for="frm_name" class="col-sm-4 control-label">Họ tên</label>
-
                                         <div class="col-sm-8">
                                             <input type="text"  class="input form-control"  name="hoten"  id="hoten" required />
                                         </div>
@@ -160,7 +154,6 @@
                                             <input type="email"  class="input form-control" name="email" id="email" required />
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="pass_tk" class="col-sm-4 control-label">Mật Khẩu</label>
 
@@ -168,26 +161,20 @@
                                             <input type="password"  class="input form-control" name="mk" id="mk" required />
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="repass_tk" onchange="checkmk()" class="col-sm-4 control-label">Nhập Lại Mật Khẩu</label>
-
                                         <div class="col-sm-8">
                                             <input type="password" class="input form-control" name="remk" id="remk" required />
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="ngaysinh_tk" class="col-sm-4 control-label">Ngày Sinh</label>
-
                                         <div class="col-sm-8">
                                             <input type="date" class="input form-control" name="ngaysinh" id="ngaysinh_tk"  />
                                         </div>
                                     </div>
-
                                     <div class="form-group">
                                         <label for="gender_tk" class="col-sm-4 control-label">Giới Tính</label>
-
                                         <div class="col-sm-8">
                                             <select class="input form-control" name="gioitinh" id="gender_tk">
                                                 <option value="" checked>Tôi Là ...</option>
@@ -205,7 +192,6 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="dienthoai" class="col-sm-4 control-label">Số Điện Thoại</label>
-
                                         <div class="col-sm-8">
                                             <input type="text" name="dienthoai" class="input form-control" id="dienthoai_dk" />
                                         </div>
