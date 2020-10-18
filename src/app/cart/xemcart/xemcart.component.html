@@ -8,7 +8,7 @@
         <div class="page-content page-order">
 
             <div class="heading-counter warning">
-                <span class="fa fa-shopping-cart"></span> Giỏ hàng của bạn chứa:
+                <span class="fa fa-shopping-cart"></span> Giỏ hàng của bạn chứa:{{tongsl}}
                 <span id="count-cart" style="font-weight: bold"></span><span>Sản phẩm</span>
             </div>
             <div class="order-detail-content">
@@ -24,23 +24,23 @@
                         </tr>
                     </thead>
                     <tbody id="show-item-cart">
-                            <tr id="sp">
-                                <td class="cart_product"><a href="#"><img src="assets/images/hinhanh/Products" style="width:50px;height:50px" alt="Product"></a></td>
-                                <td class="cart_description"><p class="product-name"><a href="#"></a></p><small class="cart_ref"></small><br></td>
-                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;"></span></td>
+                            <tr id="sp" *ngFor="let qu of giohang">
+                                <td class="cart_product"><a href="#"><img src="assets/images/hinhanh/Products/{{qu.hinh}}" style="width:50px;height:50px" alt="Product"></a></td>
+                                <td class="cart_description"><p class="product-name"><a href="#"></a></p><small class="cart_ref">{{qu.tensp}}</small><br></td>
+                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.gia}}</span></td>
                                 <td class="qty">
-                                    <input class="form-control input-sm" type="text" readonly="" value="">
+                                    <input class="form-control input-sm" type="text" readonly="" [value]="qu.quantity">
                                     <a class="plus" data-product-code=""><i class="fa fa-caret-up"></i></a>
-                                    <a class="minus" data-product-code="><i class="fa fa-caret-down"></i></a>
+                                    <a class="minus" data-product-code=""><i class="fa fa-caret-down"></i></a>
                                 </td>
-                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">)</span></td>
-                                <td class="action"><a class="remove_product" data-product-code="">Xóa sản phẩm</a></td>
+                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.money}}</span></td>
+                                <td class="action"><a class="remove_product" (click)="deleteItem(qu.masp)" data-product-code="">Xóa sản phẩm</a></td>
                             </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="2" rowspan="1"></td>
-                            <td colspan="3"><strong>Tổng thanh toán:</strong></td>
+                            <td colspan="3"><strong>Tổng thanh toán:</strong>{{total}}</td>
                             <td colspan="1" id="total_price" style="font-weight: bold; color: #e84d1c; font-size: 20px;"></td>
                             <td></td>
                         </tr>

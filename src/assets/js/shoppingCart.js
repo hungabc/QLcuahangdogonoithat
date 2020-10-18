@@ -199,7 +199,7 @@ function displayCart() {
         }
     }
     $("#show-cart").html(output);
-            $("#count-cart").html( shoppingCart.countCart() );
+    $("#count-cart").html( shoppingCart.countCart() );
     $("#total_price").html(numberWithCommas(shoppingCart.totalCart()));
 }
 //show product in page shoping cart
@@ -217,7 +217,7 @@ function displayCartPageCart() {
             output
                 +="<tr>"
                 +"<td class='cart_product'>"
-                +"<a href='#'><img src='/Assets/images/hinhanh/Products/"+cartArray[i].image+"' alt='san-pham'></a>"
+                +"<a href='#'><img src='/assets/images/hinhanh/Products/"+cartArray[i].image+"' alt='san-pham'></a>"
                 +"</td>"
                 +"<td class='cart_description'>"
                 +"<p class='product-name'><a href='#'>"+cartArray[i].name+"</a></p>"

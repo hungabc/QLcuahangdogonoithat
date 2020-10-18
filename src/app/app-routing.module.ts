@@ -9,6 +9,7 @@ const routes: Routes = [
 {path:'san-pham',loadChildren:()=>import('./sanpham/sanpham.module').then(x=>x.SanphamModule)},
 {path: 'tu-van',component: TuvanComponent},
 {path: 'thong-tin',component: ThongtinComponent},
+{path:'cart',loadChildren:()=>import('../app/cart/cart.module').then(x=>x.CartModule)},
 {path:'**',component:KhongthayComponent}
 ];
 @NgModule({

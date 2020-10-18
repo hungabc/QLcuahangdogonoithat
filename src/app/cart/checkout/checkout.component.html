@@ -6,58 +6,60 @@
         </h2>
         <!-- ../page heading-->
         <div class="page-content page-order">
+            <form>
             <div class="panel-group checkout-page accordion scrollable" id="checkout-page">
-                <!-- BEGIN PAYMENT ADDRESS -->
-                <div id="payment-address" class="panel panel-default">
-                    <div class="panel-heading">
-                        <h2 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#checkout-page" href="#payment-address-content" class="accordion-toggle">
-                                Bước 1: Thông tin đặt hàng
-                            </a>
-                        </h2>
-                    </div>
-                    <div id="payment-address-content" class="panel-collapse collapse in">
-                        <div class="panel-body row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label for="firstname">Tên <span class="require">*</span></label>
-                                    <input type="text" id="firstname" name="ho" class="input form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-Mail <span class="require">*</span></label>
-                                    <input type="text" id="email" name="email" class="input form-control">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-group">
-                                    <label for="lastname">Họ <span class="require">*</span></label>
-                                    <input type="text" id="lastname" name="ten" class="input form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="telephone">Điện thoại <span class="require">*</span></label>
-                                    <input type="text" id="telephone" name="dt" class="input form-control">
-                                </div>
-
-                            </div>
-                            <div class="col-md-12">
-                                <div class="form-group">
-                                    <label for="address1">Địa chỉ</label>
-                                    <textarea type="text" id="address1" name="dc" class="input form-control"></textarea>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="col-md-12">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" checked="checked"> Địa chỉ giao hàng và thanh toán của tôi là như nhau.
-                                    </label>
-                                </div>
-                                <input class="button  pull-left" type="button" data-toggle="collapse" data-parent="#checkout-page" data-target="#payment-method-content" id="button-payment-address" value="tiếp theo" />
-                            </div>
-                        </div>
-                    </div>
+ <!-- BEGIN PAYMENT ADDRESS -->
+ <div id="payment-address" class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">
+            <a data-toggle="collapse" data-parent="#checkout-page" href="#payment-address-content" class="accordion-toggle">
+                Bước 1: Thông tin đặt hàng
+            </a>
+        </h2>
+    </div>
+    <div id="payment-address-content" class="panel-collapse collapse in">
+        <div class="panel-body row">
+            <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                    <label for="firstname">Tên <span class="require">*</span></label>
+                    <input type="text" id="firstname" name="ho" class="input form-control">
                 </div>
-                <!-- END PAYMENT ADDRESS -->
+                <div class="form-group">
+                    <label for="email">E-Mail <span class="require">*</span></label>
+                    <input type="text" id="email" name="email" class="input form-control">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="form-group">
+                    <label for="lastname">Họ <span class="require">*</span></label>
+                    <input type="text" id="lastname" name="ten" class="input form-control">
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Điện thoại <span class="require">*</span></label>
+                    <input type="text" id="telephone" name="dt" class="input form-control">
+                </div>
+
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="address1">Địa chỉ</label>
+                    <textarea type="text" id="address1" name="dc" class="input form-control"></textarea>
+                </div>
+            </div>
+            <hr>
+            <div class="col-md-12">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" checked="checked"> Địa chỉ giao hàng và thanh toán của tôi là như nhau.
+                    </label>
+                </div>
+                <input class="button  pull-left" type="button" data-toggle="collapse" data-parent="#checkout-page" data-target="#payment-method-content" id="button-payment-address" value="tiếp theo" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END PAYMENT ADDRESS -->
+  
                 <!-- BEGIN PAYMENT METHOD -->
                 <div id="payment-method" class="panel panel-default">
                     <div class="panel-heading">
@@ -82,7 +84,7 @@
                                 </div>
                                 <div class="checkbox pull-left">
                                     <label>
-                                        <input type="checkbox"> tôi đã đọc và đồng ý với <a title="Terms & Conditions" href="#euDDieuef khoản dịch vụ </a> &nbsp;&nbsp;&nbsp;
+                                        <input type="checkbox"> tôi đã đọc và đồng ý với <a title="Terms & Conditions" href="#"> Điều khoản dịch vụ </a> &nbsp;&nbsp;&nbsp;
                                     </label>
                                 </div>
                                 <div style="clear: both">
@@ -93,8 +95,9 @@
                     </div>
                 </div>
                 <!-- END PAYMENT METHOD -->
-                <!-- BEGIN CONFIRM -->
-                <div id="confirm" class="panel panel-default">
+                </div>
+                   <!-- BEGIN CONFIRM -->
+                   <div id="confirm" class="panel panel-default">
                     <div class="panel-heading">
                         <h2 class="panel-title">
                             <a data-toggle="collapse" data-parent="#checkout-page" href="#confirm-content" class="accordion-toggle">
@@ -107,46 +110,44 @@
                             <div class="col-md-12 clearfix">
                                 <div class="table-wrapper-responsive">
                                 <span id="show-total"></span>
-                                    <table class="table table-bordered table-responsive cart_summary">
-                                        <thead>
-                                            <tr>
-                                                <th class="cart_product">Ảnh</th>
-                                                <th>Sản phẩm</th>
-                                                <th>Đơn giá</th>
-                                                <th>Số lượng</th>
-                                                <th>Tổng tiền</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="show-list-order"> 
-                                        </tbody>
-                                        <tfoot>
-                                            <tr>
-                                                <td colspan="3"><strong>Thành tiền</strong></td>
-                                                <td colspan="2" id="show-total_price" style="font-weight: bold; color: #e84d1c; font-size: 20px;"></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3"><strong>Voucher</strong></td>
-                                                <td colspan="2">
-                                                    <input style="font-weight: normal; letter-spacing: 3px;" class="input form-control" placeholder="Voucher....">
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="3"><strong>Tổng cộng</strong></td>
-                                                <td colspan="2" id="total_price_all" style="font-weight: bold; color: #e84d1c; font-size: 20px;"></td>
-                                            </tr>
-                                        </tfoot>
-                                    </table>
+                                <table class="table table-bordered table-responsive cart_summary">
+                                    <thead>
+                                        <tr>
+                                            <th class="cart_product">Ảnh</th>
+                                            <th>Sản phẩm</th>
+                                            <th>Đơn giá</th>
+                                            <th>Số lượng</th>
+                                            <th>Tổng tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="show-list-order"> 
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <td colspan="3"><strong>Thành tiền</strong></td>
+                                            <td colspan="2" id="show-total_price" style="font-weight: bold; color: #e84d1c; font-size: 20px;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><strong>Voucher</strong></td>
+                                            <td colspan="2">
+                                                <input style="font-weight: normal; letter-spacing: 3px;" class="input form-control" placeholder="Voucher....">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3"><strong>Tổng cộng</strong></td>
+                                            <td colspan="2" id="total_price_all" style="font-weight: bold; color: #e84d1c; font-size: 20px;"></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
                                 </div>
-                                <div class="clearfix"></div>
-                                <button class="button pull-right" onclick="return confirm('bạn có muốn đặt hàng không?')" id="btn-remove-all-item" type="submit" >Xác Nhận Đơn Hàng</button>
-                                <a type="button" href="" onclick="return confirm('bạn có chắc chắn muốn hủy đặt hàng?')" class="button-cancel pull-right margin-right-20">Hủy</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- END CONFIRM -->
-                </form>
-            </div>
+                   </div>
+                   <div class="clearfix"></div>
+                   <button class="button pull-right" onclick="return confirm('bạn có muốn đặt hàng không?')" id="btn-remove-all-item" type="submit" >Xác Nhận Đơn Hàng</button>
+                   <a type="button" href="" onclick="return confirm('bạn có chắc chắn muốn hủy đặt hàng?')" class="button-cancel pull-right margin-right-20">Hủy</a>
+            </form>
+        </div>
         </div>
     </div>
-</div>
