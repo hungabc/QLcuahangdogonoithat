@@ -3,14 +3,14 @@
         <div class="row">
             <div class="column col-xs-12 col-sm-3" id="left_column">
                 <div class="block left-module">
-                    <p class="title_block"><span class="fa fa-pagelines"></span>SẢN PHẨM</p>
+                    <p class="title_block"><span class="fa fa-pagelines"></span> SẢN PHẨM (>_<)</p>
                     <div class="block_content">
                         <div class="layered layered-category">
                             <div class="layered-content">
                                 <ul class="tree-menu">
-                                                <li class="#">
-                                                    <span><a href=""></a></span>
-                                                </li>
+                                    <ng-container *ngFor="let i of menus">
+                                        <li class="link_container"><a routerLink="/san-pham/sploai/{{i.url}}">{{i.tenloai}}</a></li> 
+                                    </ng-container>
                                 </ul>
                             </div>
                         </div>

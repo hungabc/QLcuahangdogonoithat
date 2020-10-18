@@ -15,6 +15,7 @@ export class HomeComponent  extends BaseComponent implements OnInit {
     page: any;
     pageSize: any;
     totalItems:any;
+    moinhap :any;
   constructor(injector:Injector) {
     super(injector)
    }
@@ -23,6 +24,13 @@ export class HomeComponent  extends BaseComponent implements OnInit {
       this._api.get('/api/SanPham/get-all'),
     ).takeUntil(this.unsubscribe).subscribe(res => {
       this.list_item = res[0];
+      this.moinhap  = res[0].sort(function(a,b){
+        var c = new Date(a.ngaynhap).getTime();
+        var d = new Date(b.ngaynhap).getTime();
+        return d -c ;
+        
+        }).slice(0, 10);
+      console.log(this.moinhap);
     }, err => { });
     this.list = [];
     this.page = 1;
@@ -50,4 +58,6 @@ export class HomeComponent  extends BaseComponent implements OnInit {
     this._cart.addToCart(it);
     alert('Thêm thành công!'); 
   }
+
+ 
 }
