@@ -16,14 +16,14 @@ tongsl:number
     this._cart.items.subscribe((res) => {
       this.giohang = res;
       this.total = 0;
-      this.tongsl=0;
+      this.tongsl=res.length;
       for(let x of this.giohang){ 
         x.money = Number.parseInt(x.quantity) * Number.parseFloat(x.gia);
         this.total +=x.money;
       
       } 
       
-    });console.log(this.total);
+    });
   } 
   clearCart() { 
     this._cart.clearCart();
@@ -38,5 +38,4 @@ tongsl:number
     item.money =  Number.parseInt(item.quantity) *  item.item_price;
     this._cart.addQty(item);
   }
-
 }

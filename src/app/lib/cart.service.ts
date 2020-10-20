@@ -63,6 +63,40 @@ export class CartService {
     localStorage.setItem('cart', JSON.stringify(local_storage));
     this.itemsSubject.next(local_storage);
   }
+  minusQuantity(item){
+    let local_storage = JSON.parse(localStorage.getItem('cart'));
+    for (let x of local_storage) {
+      if (x.masp == item.masp) {
+        x.quantity = x.quantity-1;
+        break;
+      }
+  }
+  localStorage.setItem('cart', JSON.stringify(local_storage));
+  this.itemsSubject.next(local_storage);
+}
+deleteQuantity(item){
+  let local_storage = JSON.parse(localStorage.getItem('cart'));
+  for (let x of local_storage) {
+    if (x.masp == item.masp) {
+      x.quantity = x.quantity;
+      break;
+    }
+}
+localStorage.setItem('cart', JSON.stringify(local_storage));
+  this.itemsSubject.next(local_storage);
+}
+
+  plusQuantity(item){
+    let local_storage = JSON.parse(localStorage.getItem('cart'));
+    for (let x of local_storage) {
+      if (x.masp == item.masp) {
+        x.quantity = x.quantity+1;
+        break;
+      }
+  }
+  localStorage.setItem('cart', JSON.stringify(local_storage));
+    this.itemsSubject.next(local_storage);
+}
 
   numberOfItems() {
     let local_storage = JSON.parse(localStorage.getItem('cart'));

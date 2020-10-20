@@ -8,7 +8,9 @@ import { BaseComponent } from 'src/app/lib/base.component';
 })
 export class DautrangComponent extends BaseComponent implements OnInit {
 menus:any;
-total:any;
+totalheader:any;
+cartheader:any;
+tongheader:any;
   constructor( injector:Injector) { 
     super(injector)
   }
@@ -17,10 +19,31 @@ total:any;
       this.menus = res;
     }); 
     this._cart.items.subscribe((res) => {
-      this.total = res? res.length:0;
+      this.totalheader = res? res.length:0;
     });
     setTimeout(() => {
       this.loadScripts();
     });
+    this._cart.items.subscribe((res) => {
+      this.cartheader = res;
+      this.totalheader = res? res.length:0;
+      this.tongheader=0;
+      for(let x of this.cartheader){ 
+        x.money = Number.parseInt(x.quantity) * Number.parseFloat(x.gia);
+        this.tongheader +=x.money;
+      
+      } 
+      
+    });
+  }
+  deleteItem(masp) {
+    this._cart.deleteQuantity(masp);
+  }
+  plusItem(masp){
+    this._cart.plusQuantity(masp);
+  }
+  minusItem(masp){
+    this._cart.minusQuantity(masp);
   }
 }
+

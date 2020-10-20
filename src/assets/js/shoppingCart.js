@@ -297,17 +297,6 @@ $("#show-cart").on("click", ".bt_remove_product", function (event) {
     displayCart();
 });
 
-$("#show-cart").on("click", ".bt_minus", function (event) {
-    var productcode = $(this).attr("data-product-code");
-    shoppingCart.removeItemFromCart(productcode);
-    displayCart();
-});
-
-$("#show-cart").on("click", ".bt_plus", function (event) {
-    var productcode = $(this).attr("data-product-code");
-    shoppingCart.addItemToCart(null, 0, 1,null,productcode);
-    displayCart();
-});
 
 $("#show-cart").on("change", ".item-count", function (event) {
     var productcode = $(this).attr("data-product-code");

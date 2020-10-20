@@ -3,7 +3,7 @@
     <div class="container main-header">
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 logo">
-                <a routerLink="/"><img alt="Gỗ Trang Trí" src="assets/images/logo.png" /></a>
+                <a href="/"><img alt="Gỗ Trang Trí" src="assets/images/logo.png" /></a>
             </div>
             <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
                 <form class="form-inline" action=""method="post" id="header-search">
@@ -30,7 +30,7 @@
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                <button type="buttson" class="navbar-toggle collapsed" data-toggle="collapse"
                                         data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                                     <i class="fa fa-bars"></i>
                                 </button>
@@ -38,7 +38,7 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
-                                    <li class="active"><a routerLink="/"><span class="fa fa-home"></span> TRANG CHỦ</a></li>
+                                    <li class="active"><a href="/"><span class="fa fa-home"></span> TRANG CHỦ</a></li>
                                     <li class="dropdown">
                                         <a routerLink="san-pham" class="dropdown-toggle"
                                            data-toggle="dropdown">SẢN PHẨM</a>
@@ -74,7 +74,7 @@
 </div>
 <div class="demo_changer active" id="demo_changer" style="right: 0px;">
     <div class="demo-icon fa fa-shopping-cart">
-        <span class="notify notify-left" id="count-cart"></span>
+        <span class="notify notify-left" >{{totalheader}}</span>
     </div>
     <div class="form_holder">
         <div class="cart-block">
@@ -82,16 +82,36 @@
                 <div class="cart-block-list">
                     <div class="shop_cart">
                         <table class="shop_table">
-                            <tbody id="show-cart"></tbody>
+                            <tbody>
+                                <tr class='cart_item' *ngFor="let item3 of cartheader">
+                                    <td class='product-remove'>
+                                    <div  class='bt_remove_product left' (click)="deleteItem(item3)" > </div>
+                                    </td>
+                                    <td class='product-name'>
+                                    <b>{{item3.tensp}}</b>
+                                    <div class='clr'></div>
+                                    <div class='box_quantity left'>
+                                    <div class='quantity right'>
+                                    <input class='bt_minus' type='button' value='-' (click)="minusItem(item3)" data-product-code=' '>
+                                    <input type='text' disabled='' name='product_cart_qty' [value]="item3.quantity" title='Qty' class='input-text qty text product_qty' size='4'>
+                                    <input class='bt_plus' type='button' value='+' (click)="plusItem(item3)" data-product-code=' '>
+                                    </div>
+                                    </div>
+                                    </td>
+                                    <td class='product-price' valign='top'>
+                                    <span class='amount'>{{item3.gia | currency:'VND':true:'1.0-2'}}</span>
+                                    </td>
+                                    </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
                 <div class="toal-cart">
                     <span>Tổng tiền</span>
-                    <span class="toal-price pull-right" id="total_price"></span>
+                    <span class="toal-price pull-right">{{tongheader| currency:'VND':true:'1.0-2'}}</span>
                 </div>
                 <div class="cart-buttons">
-                    <a routerLink="" class="btn-check-out">Giỏ Hàng</a>
+                    <a class="btn-check-out" [routerLink]="['/cart']">Giỏ Hàng</a>
                 </div>
             </div>
         </div>

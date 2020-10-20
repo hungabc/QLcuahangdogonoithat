@@ -26,29 +26,28 @@
                     <tbody id="show-item-cart">
                             <tr id="sp" *ngFor="let qu of giohang">
                                 <td class="cart_product"><a href="#"><img src="assets/images/hinhanh/Products/{{qu.hinh}}" style="width:50px;height:50px" alt="Product"></a></td>
-                                <td class="cart_description"><p class="product-name"><a href="#"></a></p><small class="cart_ref">{{qu.tensp}}</small><br></td>
-                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.gia}}</span></td>
+                                <td class="cart_description"><p class="product-name"><a href="#"></a></p><small class="cart_ref"><h5>{{qu.tensp}}</h5></small><br></td>
+                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.gia| currency:'VND':true:'1.0-2'}}</span></td>
                                 <td class="qty">
                                     <input class="form-control input-sm" type="text" readonly="" [value]="qu.quantity">
                                     <a class="plus" data-product-code=""><i class="fa fa-caret-up"></i></a>
                                     <a class="minus" data-product-code=""><i class="fa fa-caret-down"></i></a>
                                 </td>
-                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.money}}</span></td>
+                                <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.money| currency:'VND':true:'1.0-2'}}</span></td>
                                 <td class="action"><a class="remove_product" (click)="deleteItem(qu.masp)" data-product-code="">Xóa sản phẩm</a></td>
                             </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colspan="2" rowspan="1"></td>
-                            <td colspan="3"><strong>Tổng thanh toán:</strong>{{total}}</td>
-                            <td colspan="1" id="total_price" style="font-weight: bold; color: #e84d1c; font-size: 20px;"></td>
-                            <td></td>
+                            <td colspan="3"><strong>Tổng thanh toán:</strong></td>
+                            <td colspan="1" id="total_price" style="font-weight: bold; color: #e84d1c; font-size: 20px;">{{total| currency:'VND':true:'1.0-2'}}</td>
                         </tr>
                     </tfoot>
                 </table>
                 <div class="cart_navigation">
                     <a class="prev-btn" href="">Quay lại</a>
-                    <a class="next-btn" href="">Tiến hành thanh toán</a>
+                    <a class="next-btn" [routerLink]="['check-out']">Tiến hành thanh toán</a>
                 </div>
             </div>
         </div>
