@@ -6,7 +6,7 @@
         </h2>
         <!-- ../page heading-->
         <div class="page-content page-order">
-            <form>
+            <form  [formGroup]="hoadonForm" (ngSubmit)="themdon(hoadonForm.value)">
             <div class="panel-group checkout-page accordion scrollable" id="checkout-page">
  <!-- BEGIN PAYMENT ADDRESS -->
  <div id="payment-address" class="panel panel-default">
@@ -22,28 +22,28 @@
             <div class="col-md-6 col-sm-6">
                 <div class="form-group">
                     <label for="firstname">Tên <span class="require">*</span></label>
-                    <input type="text" id="firstname" name="ho" class="input form-control">
+                    <input type="text" id="firstname" formControlName="ho" class="input form-control">
                 </div>
                 <div class="form-group">
                     <label for="email">E-Mail <span class="require">*</span></label>
-                    <input type="text" id="email" name="email" class="input form-control">
+                    <input type="text" id="email" formControlName="email" class="input form-control">
                 </div>
             </div>
             <div class="col-md-6 col-sm-6">
                 <div class="form-group">
                     <label for="lastname">Họ <span class="require">*</span></label>
-                    <input type="text" id="lastname" name="ten" class="input form-control">
+                    <input type="text" id="lastname" formControlName="ten" class="input form-control">
                 </div>
                 <div class="form-group">
                     <label for="telephone">Điện thoại <span class="require">*</span></label>
-                    <input type="text" id="telephone" name="dt" class="input form-control">
+                    <input type="text" id="telephone" formControlName="dienthoai" class="input form-control">
                 </div>
 
             </div>
             <div class="col-md-12">
                 <div class="form-group">
                     <label for="address1">Địa chỉ</label>
-                    <textarea type="text" id="address1" name="dc" class="input form-control"></textarea>
+                    <textarea type="text" id="address1" formControlName="diachi" class="input form-control"></textarea>
                 </div>
             </div>
             <hr>
@@ -58,6 +58,7 @@
         </div>
     </div>
 </div>
+           
 <!-- END PAYMENT ADDRESS -->
 <!-- BEGIN PAYMENT METHOD -->
                 <div id="payment-method" class="panel panel-default">
