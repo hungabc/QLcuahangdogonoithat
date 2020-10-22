@@ -18,7 +18,6 @@ export class ChitietspComponent extends BaseComponent implements OnInit {
       this.menus = res;
       
     }); 
-
       this.item = {};
     this._route.params.subscribe(params => {
       let id = params['id'];

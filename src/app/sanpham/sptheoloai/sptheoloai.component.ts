@@ -25,9 +25,7 @@ export class SptheoloaiComponent extends BaseComponent implements OnInit {
   ngOnInit(): void {
     this._api.get('/api/Loaisp/get-all').takeUntil(this.unsubscribe).subscribe(res => {
       this.menus = res;
-      
     }); 
-
     if(this.index==0||this.index==null) this.index=1;
     if(this.pageSize<10||this.pageSize==null) this.pageSize=10;
     this.sploai = [];
@@ -39,14 +37,12 @@ export class SptheoloaiComponent extends BaseComponent implements OnInit {
       
       this._api.get('/api/Sanpham/sp-theo-loai/'+this.MALOAI+'/1/10').takeUntil(this.unsubscribe).subscribe(ress => {
         this.sploai = ress;
-        
         setTimeout(() => {
          this.loadScripts(); 
         });
         }, err => { });   
    });    
    }
- 
 addToCart(it) { 
   this._cart.addToCart(it);
   alert('Thêm thành công!'); 
