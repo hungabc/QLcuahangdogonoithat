@@ -174,8 +174,8 @@ function displayCart() {
         output = "<p style='padding-left: 20px;'>Chưa có sản phẩm nào</p>"
     }
     else {
-        tongsoluong
-        ="Tổng số mục sản phẩm: <input value='"+cartArray.length+"' name='tong' readonly />"
+        
+        
         for (var i in cartArray) {
             output += "<tr class='cart_item'>"
                 + "<td class='product-remove'>"
@@ -211,8 +211,8 @@ function displayCartPageCart() {
         output = "<tr><td colspan='7' style='text-align: center'><p style='padding-left: 20px;'>Chưa có sản phẩm nào</p></td></tr>"
     }
     else {
-        tongsoluong
-        ="Tổng số mục sản phẩm: <input value='"+cartArray.length+"' name='tong' readonly />"
+        
+        
         for (var i in cartArray) {
             output
                 +="<tr>"
@@ -239,7 +239,7 @@ function displayCartPageCart() {
                 +"</tr>";
         }
     }
-    $("#sosp").html(tongsoluong);
+    $("#sosp").html();
     $("#show-item-cart").html(output);
     $("#count-cart").html( shoppingCart.countCart() );
     $("#total_price").html(numberWithCommas(shoppingCart.totalCart()));
@@ -250,13 +250,12 @@ function displayCartPageCheckOut() {
     var cartArray = shoppingCart.listCart();
     console.log(cartArray);
     var output = "";
-    var tongsoluong="";
+    
     if (cartArray.length <= 0) {
         output = "<tr><td colspan='7' style='text-align: center'><p style='padding-left: 20px;'>Chưa có sản phẩm nào</p></td></tr>"
     }
     else {
-        tongsoluong
-        ="Tổng số mục sản phẩm: <input value='"+cartArray.length+"' name='tong' readonly />"
+        
         for (var i in cartArray) {
             output
                 +="<tr>"
@@ -279,7 +278,7 @@ function displayCartPageCheckOut() {
                 +"</tr>";
         }
     }
-    $("#show-total").html(tongsoluong);
+    $("#show-total").html();
     $("#show-list-order").html(output);
     $("#show-total_price").html(numberWithCommas(shoppingCart.totalCart()));
     $("#total_price_all").html(numberWithCommas(shoppingCart.totalCart()));

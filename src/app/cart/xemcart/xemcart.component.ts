@@ -29,6 +29,12 @@ tongsl:number
     this._cart.clearCart();
     alert('Xóa thành công');
   }
+  plusItem(masp){
+    this._cart.plusQuantity(masp);
+  }
+  minusItem(masp){
+    this._cart.minusQuantity(masp);
+  }
   deleteItem(masp) {
     this._cart.deleteItem(masp);
     alert('Xóa thành công');

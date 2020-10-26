@@ -6,7 +6,7 @@ import { BaseComponent } from 'src/app/lib/base.component';
   templateUrl: './phongkhach.component.html',
   styleUrls: ['./phongkhach.component.css']
 })
-export class PhongkhachComponentachco extends BaseComponent implements OnInit {
+export class PhongkhachComponent extends BaseComponent implements OnInit {
   item:any;
   total:any;
     constructor( injector:Injector) { 

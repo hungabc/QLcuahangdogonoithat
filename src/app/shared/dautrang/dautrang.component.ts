@@ -36,6 +36,10 @@ tongheader:any;
       
     });
   }
+  clearCart() { 
+    this._cart.clearCart();
+    alert('Xóa thành công');
+  }
   deleteItem(masp) {
     this._cart.deleteQuantity(masp);
   }
