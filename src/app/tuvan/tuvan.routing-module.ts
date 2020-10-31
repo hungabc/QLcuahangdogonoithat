@@ -7,6 +7,7 @@ import { PhonglamviecComponent } from './phonglamviec/phonglamviec.component';
 import { PhongnguComponent } from './phongngu/phongngu.component';
 
 const routes: Routes = [
+{path:'tu-van',loadChildren:()=>import('../tuvan/tuvan.module').then(x=>x.TuvanModule)},
 {
   path: 'phong-khach',
   component: PhongkhachComponent,

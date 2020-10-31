@@ -18,4 +18,4 @@ import { TuvanRoutingModule } from './tuvan.routing-module';
     TuvanRoutingModule,SharedModule
   ]
 })
-export class SanphamModule { }
+export class TuvanModule { }
