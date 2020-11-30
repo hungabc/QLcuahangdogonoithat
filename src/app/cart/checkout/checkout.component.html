@@ -127,7 +127,7 @@
                                         <td class="qty">
                                             <input class="form-control input-sm" type="text" readonly="" [value]="qu.quantity">
                                             <a class="plus" data-product-code=""><i class="fa fa-caret-up" (click)="plusItem(qu)" ></i></a>
-                                            <a class="minus" data-product-code=""><i class="fa fa-caret-down" (click)="plusItem(qu)" ></i></a>
+                                            <a class="minus" data-product-code=""><i class="fa fa-caret-down" (click)="minusItem(qu)" ></i></a>
                                         </td>
                                         <td class="price"><span style="color: #e84d1c; font-size: 18px; font-weight: bold;">{{qu.money| currency:'VND':true:'1.0-2'}}</span></td>
                                         <td class="action"><a class="remove_product" (click)="deleteItem(qu.masp)" data-product-code="">Xóa sản phẩm</a></td>
