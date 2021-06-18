@@ -66,9 +66,15 @@ export class CartService {
   minusQuantity(item){
     let local_storage = JSON.parse(localStorage.getItem('cart'));
     for (let x of local_storage) {
-      if (x.masp == item.masp) {
+      if (x.masp == item.masp && x.quantity>1) {
         x.quantity = x.quantity-1;
         break;
+      }
+      else{
+        if (confirm("bạn có muốn xóa sản phẩm khỏi giỏ hàng?")){
+          this.deleteItem(item.masp);
+          return;
+        }
       }
   }
   localStorage.setItem('cart', JSON.stringify(local_storage));

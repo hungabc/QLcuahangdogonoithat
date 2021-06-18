@@ -1,53 +1,101 @@
-<div class="page-top">
-    <div class="content-page">
-        <div class="container">
-            <div class="category-featured Vegetables">
-                <nav class="navbar nav-menu show-brand">
-                    <div class="container">
-                        <div class="navbar-brand"><a href="#"> <img alt="fashion" src="assets/images/check_mark.png" />Từ khóa ""</a></div>
-                        <div class="collapse navbar-collapse">
-                        
-                        </div>
-                    <label>có  kết quả </label>
-                    <!-- hàm coutn để đếm số phần tử của mảng -->
-                    </div>
-                </nav>
-                <div class="product-featured clearfix">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="box-right">
-                                    <ul class="product-list">
-                                        <li class="col-sm-4 product-item">
-                                            <div class="left-block">
-                                                <a href="">
-                                                    <img class="img-responsive" alt="Sản Phẩm Chi Tiết"
-                                                         src="assets/images/hinhanh/Products" />
-                                                </a>
-
-                                                <div class="quick-view">
-                                                    <a title="Tương tác" class="heart" href="#"></a>
-                                                    <a title="So sánh sản phẩm đồng giá" class="compare" href="#"></a>
-                                                    <a title="Quick view" href="assets/images/hinhanh/Products" class="search fancybox-button"></a>
-                                                </div>
-                                                <div class="add-to-cart">
-                                                    <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng" data-name=""
-                                                       data-price="" data-image="" data-product-code="">Thêm Vào Giỏ Hàng</a>
-                                                </div>
-                                                <div class="icon-sale7"></div>
-                                            </div>
-                                            <div class="right-block">
-                                                <h5 class="product-name"><a href=""></a></h5>
-                                            </div>
-                                            <div class="content_price">
-                                                <div class="content_price">
-                                                    <span class="price product-price"><span style="color: black"></span> Đồng</span>
-                                                </div>
-                                            </div>
+<div class="columns-container">
+    <div class="container" id="columns">
+        <div class="row">
+            <div class="column col-xs-12 col-sm-3" id="left_column">
+                <div class="block left-module">
+                    <p class="title_block"><span class="fa fa-pagelines"></span>Loại sản phẩm</p>
+                    <div class="block_content">
+                        <div class="layered layered-category">
+                            <div class="layered-content">
+                                <ul class="tree-menu">
+                                    <li><span><a href="javascript:void(0)" id="{{'loai0'}}" class="highlighted-loai" (click)="locTheoLoai(0)">Tất
+                                                cả các loại</a></span></li>
+                                    <ng-container *ngFor="let l of loais">
+                                        <li class="">
+                                            <span><a id="{{'loai'+l.maloai}}" href="javascript:void(0)"
+                                                    (click)="locTheoLoai(l.maloai)">{{l.tenloai}}</a></span>
                                         </li>
-                                    </ul>
+                                    </ng-container>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="block left-module">
+                    <p class="title_block"><span class="fa fa-pagelines"></span>Giá</p>
+                    <div class="block_content">
+                        <div class="layered layered-category">
+                            <div class="layered-content">
+                                <form [formGroup]="formGia">
+                                    <div><label for="">Giá min</label><input type="number" formControlName="giaMin" min="0" (change)="locTheoGia()" class="form-control">
+                                    </div>
+                                    <div><label for="">Giá max</label><input type="number" formControlName="giaMax" min="0" (change)="locTheoGia()" class="form-control">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center_column col-xs-12 col-sm-9" id="center_column">
+                <h2 class="page-heading">
+                    <span class="page-heading-title">Kết quả tìm kiếm cho Từ khóa "{{keyWord}}"</span>
+                </h2>
+                <div id="product">
+                    <div class="category-featured Vegetables">
+                        <div class="product-featured clearfix">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="box-right">
+                                        <ul class="product-list">
+                                            <ng-container *ngFor="let kqtk of spResults">
+                                                <li class="col-sm-4 product-item">
+                                                    <div class="left-block">
+                                                        <a href="sanpham/chi-tiet/{{kqtk.masp}}">
+                                                            <img class="img-responsive" alt="{{kqtk.tensp}}"
+                                                                src="assets/images/hinhanh/Products/{{kqtk.hinh}}" />
+                                                        </a>
+
+                                                        <div class="quick-view">
+                                                            <a title="Tương tác" class="heart" href="#"></a>
+                                                            <a title="So sánh sản phẩm đồng giá" class="compare"
+                                                                href="#"></a>
+                                                            <a title="Quick view" href="assets/images/hinhanh/Products"
+                                                                class="search fancybox-button"></a>
+                                                        </div>
+                                                        <div class="add-to-cart">
+                                                            <a class="add-item-to-cart" title="Thêm Vào Giỏ Hàng"
+                                                                data-name="" href="javascript:void(0)" data-price=""
+                                                                data-image="" data-product-code=""
+                                                                (click)="addToCart(kqtk )">Thêm Vào Giỏ
+                                                                Hàng</a>
+                                                        </div>
+                                                        <div class="icon-sale7"></div>
+                                                    </div>
+                                                    <div class="right-block">
+                                                        <h5 class="product-name"><a
+                                                                href="sanpham/chi-tiet/{{kqtk.masp}}">{{kqtk.tensp}}</a>
+                                                        </h5>
+                                                    </div>
+                                                    <div class="content_price">
+                                                        <div class="content_price">
+                                                            <span class="price product-price"><span
+                                                                    style="color: black"></span>
+                                                                {{kqtk.gia | currency:'VND':true:'1.0-2'}}</span>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ng-container>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="shop_toolbar t_bottom">
+                    <ngb-pagination [collectionSize]="tongsl1" [pageSize]="size" [(page)]="index" [maxSize]="10"
+                        [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
                 </div>
             </div>
         </div>

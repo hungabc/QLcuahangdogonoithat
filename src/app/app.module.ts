@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 // import { CheckoutComponent } from './cart/checkout/checkout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module';
+// import { TimkiemModule } from './timkiem/timkiem.module';
 //import { ThongtinComponent } from './thongtin/thongtin.component';
 //import { LienheComponent } from './thongtin/lienhe/lienhe.component';
 //import { GioithieuComponent } from './thongtin/gioithieu/gioithieu.component';

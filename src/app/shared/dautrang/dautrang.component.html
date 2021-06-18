@@ -6,9 +6,9 @@
                 <a href="/"><img alt="Gỗ Trang Trí" src="assets/images/logo.png" /></a>
             </div>
             <div class="col-xs-4 col-sm-12 col-md-5 col-lg-4 header-search-box">
-                <form class="form-inline" action="" method="post" id="header-search">
+                <form class="form-inline"  [formGroup]="formTimKiem" (ngSubmit)="timKiem()" id="header-search">
                     <div class="form-group input-serach">
-                        <input type="text" name="timkiem" placeholder="Search ...">
+                        <input type="text" formControlName="keyWord" placeholder="Search ...">
                     </div>
                     <button type="submit" class="pull-right btn-search"><i class="fa fa-search"></i></button>
                 </form>
