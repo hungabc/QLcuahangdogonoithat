@@ -136,6 +136,10 @@ export class DautrangComponent extends BaseComponent implements OnInit {
       this.danhsachloi['name'] = "ban chua nhap hoten";
 
     }
+    if (value.email == "") {
+      this.danhsachloi['email'] = "ban chua nhap dung email";
+
+    }
     if (value.mk == "") {
       this.danhsachloi['password'] = "ban chua nhap mat khau";
 
@@ -179,7 +183,7 @@ export class DautrangComponent extends BaseComponent implements OnInit {
           if (this.acc.quyen === 1) {
             return window.location.reload();
           }
-          else return window.open('localhost:4201', '_blank');//trang quản trị tab mới
+          else return window.open('localhost:4201','_blank');//trang quản trị tab mới
         }
         else {
           this.isError = true;
@@ -211,7 +215,7 @@ export class DautrangComponent extends BaseComponent implements OnInit {
         if (this.acc.quyen === 1) {
           return window.location.reload();
         }
-        else return window.open('localhost:4201', '_blank');//trang quản trị tab mới
+        else return window.open('localhost:4201','_blank');//trang quản trị tab mới
       }
       else {
         this.isError = true;
